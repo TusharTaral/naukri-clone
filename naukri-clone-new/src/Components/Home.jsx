@@ -1,12 +1,15 @@
 import React from 'react'
 import FirstDiv from './FirstDiv'
-import {Navbar} from "./Navbar"
-import styled from "./Home.module.css"
+
+import { SpringCog } from './reactSpring/SpringCog'
+import { CenterPagination } from './CenterPagination'
+
 const Home = () => {
   return (
     <div>
-      <Navbar/>
-       <FirstDiv/>
+      <FirstDiv />
+      <SpringCog />
+      <CenterPagination />
     </div>
   )
 }
