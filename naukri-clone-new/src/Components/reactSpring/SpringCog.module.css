@@ -1,0 +1,29 @@
+.hiring{
+  display: flex;
+  background-color: whitesmoke;
+  border: 1px solid rgb(211, 203, 203);
+  width: 50rem;
+  margin: 1rem 2rem;
+
+}
+.compName{
+  height: 3rem;
+  width: 6rem;
+  border: 1px solid rgb(196, 187, 187);
+  margin: 1rem 1rem;
+}
+.hiring2{
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  border: 1px solid rgb(211, 203, 203);
+  width: 8.5rem;
+  margin: 1rem 2rem;
+
+}
+.compName2{
+  height: 3rem;
+  width: 6rem;
+  border: 1px solid rgb(196, 187, 187);
+  margin: 0.5rem 1rem ;
+}
