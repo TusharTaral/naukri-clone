@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import styles from "./Register.module.css"
 
 const initState = {
   name: "",
@@ -42,11 +42,13 @@ export const Register = () => {
     }
   };
   return  (
-    <div>
-      <h1>Register Page</h1>
-      <div>
-        Name:{" "}
-        <input
+    
+    <div className={styles.outer}>
+      <h1 className={styles.regi}>Register </h1>
+      <div className={styles.outerName}  >
+        {/* Name:{" "} */}
+        <input  className={styles.names} className={styles.names}
+        placeholder='Enter full name'
           value={form.name}
           name="name"
           onChange={handleChange}
@@ -54,9 +56,10 @@ export const Register = () => {
         />
       </div>
       <br />
-      <div>
-        Email:{" "}
-        <input
+      <div className={styles.outerName} >
+        {/* Email:{" "} */}
+        <input  className={styles.names}
+        placeholder="Enter Email Address"
           value={form.email}
           name="email"
           onChange={handleChange}
@@ -64,9 +67,10 @@ export const Register = () => {
         />
       </div>
       <br />
-      <div>
-        Create_Password:{" "}
-        <input
+      <div className={styles.outerName} >
+        {/* Create_Password:{" "} */}
+        <input  className={styles.names}
+        placeholder="Enter Password"
           value={form.password}
           name="password"
           onChange={handleChange}
@@ -74,9 +78,10 @@ export const Register = () => {
         />
       </div>
       <br />
-      <div>
-        Mobile:{" "}
-        <input
+      <div className={styles.outerName} >
+        {/* Mobile:{" "} */}
+        <input  className={styles.names}
+        placeholder="Enter Mobile Number"
           value={form.mobile}
           name="mobile"
           onChange={handleChange}
@@ -84,17 +89,26 @@ export const Register = () => {
         />
       </div>
       <br />
-      <div>
-        City:{" "}
-        <input
+      <div className={styles.outerName} >
+        {/* City:{" "} */}
+        <input  className={styles.names}
+        placeholder="Enter City Name"
           value={form.city}
           name="city"
           onChange={handleChange}
           type="text"
         />
       </div>
+     
+      <div style={{textAlign:"center",marginLeft:"4%"}}>
+      <div style={{display:"flex"}} >
+      <input style={{marginTop:"20px"}} type="checkbox"></input>
+        <p>I agree to the Terms and Conditions and Privacy Policy governing the use of Naukri.com</p>
+      
+      </div>
+      </div>
       <br />
-      <button onClick={handleRegister}>REGISTER</button>
+      <button  className={styles.btn} onClick={handleRegister}>REGISTER NOW</button>
     </div>
   )
 };
