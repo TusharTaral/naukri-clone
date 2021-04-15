@@ -2,8 +2,9 @@
   display: flex;
   background-color: whitesmoke;
   border: 1px solid rgb(211, 203, 203);
-  width: 50rem;
-  margin: 1rem 2rem;
+  width: 55.5rem;
+  margin: 2rem 2rem;
+  margin-left: 8%;
 
 }
 .compName{
@@ -11,6 +12,7 @@
   width: 6rem;
   border: 1px solid rgb(196, 187, 187);
   margin: 1rem 1rem;
+  margin-left: 30px;
 }
 .hiring2{
   display: flex;
@@ -19,6 +21,7 @@
   border: 1px solid rgb(211, 203, 203);
   width: 8.5rem;
   margin: 1rem 2rem;
+  margin-left: 8%;
 
 }
 .compName2{
