@@ -1,86 +1,81 @@
 import React, { useEffect, useState } from 'react'
 import styled from "./MapDiv.module.css"
-import axios from "axios"
-const MapDiv = () => {
-    const [data, setData] = useState([])
-    useEffect(() => {
-        getData()
-    }, [])
+import { useSelector } from 'react-redux'
 
-    function getData() {
-        const requestParam = {
-            method: 'get',
-            url: 'https://json-server-vedanshw.herokuapp.com/naukri',
-        }
-        axios(requestParam)
-            .then(response => setData(response.data))
-            .catch(err => console.log(err));
-    }
-    console.log(data.map(e=>(e.techStack.map(el=>(<div>{el}</div>)))))
-    
+const MapDiv = () => {
+
+    const data = useSelector(state => state.job.jobs)
+
     return (
-        <div>
+        <div className={styled.container}>
             {
                 data && data.map(el => (
 
                     <div className={styled.box}>
-                        <h2 style={{ color: "black" }}>{el.companyName}</h2>
-                        <h3>{el.skill}</h3>
+                        <h2 className={styled.companyName}>{el.companyName}</h2>
+                        <div className={styled.ratingDiv}>
+                            <h5 className={styled.skill} >{el.skill}</h5>
+                            <div className={styled.ratingDivTwo}>
+                                <div><h5 className={styled.skill, styled.rating}>{el.rating}</h5></div>
+                                <div> <img className={styled.img} src="https://img.icons8.com/emoji/48/000000/star-emoji.png" /></div>
+                            </div>
+                        </div>
+
                         <div className={styled.flex}>
                             <div className={styled.flex}>
                                 <div>
-                                    <img className={styled.img} src="https://www.flaticon.com/svg/vstatic/svg/25/25807.svg?token=exp=1618382093~hmac=410954768455049372b545d2b02695ed" alt="1" />
+                                    <img className={styled.img} src="https://img.icons8.com/android/24/000000/suitcase.png" alt="1" />
                                 </div>
-                                <div className={styled.margin}>{el.experience}</div>
+                                <div className={styled.subs}>{el.experience} Yrs</div>
                             </div>
                             <div className={styled.flex}>
                                 <div>
-                                    <img className={styled.img} src="https://image.flaticon.com/icons/png/128/25/25473.png" alt="2" />
+                                    <img className={styled.img} src="https://img.icons8.com/material-sharp/24/000000/rupee.png" alt="2" />
                                 </div>
-                                <div className={styled.margin}>{el.salary}</div>
+                                <div className={styled.subs}>{el.salary}</div>
                             </div>
                             <div className={styled.flex}>
                                 <div>
                                     <img className={styled.img} src="https://image.flaticon.com/icons/png/128/484/484167.png" alt="3" />
                                 </div>
-                                <div className={styled.margin}>{el.location}</div>
+                                <div className={styled.subs}>{el.location}</div>
                             </div>
                         </div>
                         <div className={styled.flex}>
                             <div>
-                                <img className={styled.img} src="https://t3.ftcdn.net/jpg/02/54/72/34/240_F_254723485_c9K810T1PALhco8AOE9oNsjlOUt2US2w.jpg" alt="4" />
+                                <img className={styled.img} src="https://img.icons8.com/pastel-glyph/32/000000/regular-document--v1.png" alt="4" />
                             </div>
-                            <div className={styled.margin}>{el.description}</div>
+                            <div className={styled.subs}>{el.description}</div>
                         </div>
                         <div className={styled.flex}>
                             <div className={styled.flex}>
                                 <div>
-                                    <img className={styled.img} src="https://t3.ftcdn.net/jpg/01/64/09/16/240_F_164091630_VaTUAAxbkt4NToNPfnWoPkfxEqmTVdJr.jpg" alt="" />
+                                    <img className={styled.img} src="https://img.icons8.com/android/50/000000/clock.png" alt="" />
                                 </div>
-                                <div className={styled.margin}>{el.date}</div>
-                    </div>
-                         <div className={styled.flex} >
-                             {/* <div>{el.techStack[0]}</div> */}
-                       {/* {  (el.techStack.map(e=> (<div>{e}</div>)))} */}
-                       {el.techStack.map(e=>(<div style={{marginTop:"-10px" }}>{e.techStack} <ul><li> {e.techStack} </li></ul></div>))}
-                           {/* {el.techStack.forEach(element =>  (<div>{element}hi</div>)
+                                <div className={styled.dateDiv}>
+                                    <div className={styled.subs}>{el.date} days ago</div>
+                                </div>
+                            </div>
+                            <div className={styled.flex} >
+                                {/* <div>{el.techStack[0]}</div> */}
+                                {/* {  (el.techStack.map(e=> (<div>{e}</div>)))} */}
+                                {/* {el.techStack.map(e => (<div style={{ marginTop: "-10px" }}>{e.techStack} <ul><li> {e.techStack} </li></ul></div>))} */}
+                                {/* {el.techStack.forEach(element =>  (<div>{element}hi</div>)
                                
                            )} */}
-                         </div>
+                            </div>
 
-                    
-                            <div className={styled.flex} style={{ marginLeft: "10%" }}>
+
+                            <div className={styled.flex} style={{ marginLeft: "61%" }}>
                                 <div>
-                                    <img className={styled.img} src="https://t3.ftcdn.net/jpg/02/12/94/86/240_F_212948692_hmAugxE54yt4XGzqCeImTZjNyYkAX7S4.jpg" alt="" />
+                                    <img className={styled.img} src="https://img.icons8.com/metro/50/000000/star.png" alt="" />
                                 </div>
-                                <div className={styled.margin}>save</div>
+                                <div className={styled.subs}>save</div>
                             </div>
                         </div>
                     </div>
-                   
+
                 ))
-
-
             }
 
         </div>

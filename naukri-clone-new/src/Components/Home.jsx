@@ -25,17 +25,17 @@ const Home = () => {
         <div>
           <SideDiv1 />
           <SideDiv2 />
-          <SideDiv3/>
-          <SideDiv4/>
-          <SideDiv5/>
-          <SideDiv6/>
-          <SideDiv7/>
-          <SideDiv8/>
-          <SideDiv9/>
+          <SideDiv3 />
+          <SideDiv4 />
+          <SideDiv5 />
+          <SideDiv6 />
+          <SideDiv7 />
+          <SideDiv8 />
+          <SideDiv9 />
         </div>
-   
+
       </div>
-      <Footer/>
+      <Footer />
     </div>
   )
 }
