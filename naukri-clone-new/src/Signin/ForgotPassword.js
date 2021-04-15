@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react"
-//import { Form, Button, Card, Alert } from "react-bootstrap"
+import styles from "./ForgotPassword.module.css"
 import { useAuth } from "./contexts/AuthContext"
 import { Link } from "react-router-dom"
 
@@ -18,7 +18,7 @@ export default function ForgotPassword() {
       setError("")
       setLoading(true)
       await resetPassword(emailRef.current.value)
-      setMessage("Check your inbox for further instructions")
+      setMessage("Check your inbox password reset link send to your register Email")
     } catch {
       setError("Failed to reset password")
     }
@@ -27,29 +27,29 @@ export default function ForgotPassword() {
   }
 
   return (
-    <>
-      <card>
+    <div className={styles.outer}>
+     
         <div>
-          <h2 className="text-center mb-4">Password Reset</h2>
-          {error && <p variant="danger">{error}</p>}
-          {message && <p variant="success">{message}</p>}
+          <h1 className={styles.regi}>Password Reset</h1>
+          {error && <p className={styles.err}>{error}</p>}
+          {message && <p className={styles.succ}>{message}</p>}
           <form onSubmit={handleSubmit}>
-            <div id="email">
-              <label>Email</label>
-              <input type="email" ref={emailRef} required />
+            <div className={styles.outerName} id="email">
+             
+              <input className={styles.names} placeholder="Enter Email" type="email" ref={emailRef} required />
             </div>
-            <button disabled={loading} className="w-100" type="submit">
+            <button disabled={loading} className={styles.btn}type="submit">
               Reset Password
             </button>
           </form>
-          <div className="w-100 text-center mt-3">
+          <div >
             <Link to="/login">Login</Link>
           </div>
         </div>
-      </card>
-      <div className="w-100 text-center mt-2">
+      
+      <div >
         Need an account? <Link to="/signup">Sign Up</Link>
       </div>
-    </>
+    </div>
   )
 }

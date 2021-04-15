@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react"
-//import { Form, Button, Card, Alert } from "react-bootstrap"
 import { useAuth } from "./contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import styles from "./UpdateProfile.module.css"
 
 export default function UpdateProfile() {
   const emailRef = useRef()
@@ -50,7 +50,7 @@ export default function UpdateProfile() {
           <form onSubmit={handleSubmit}>
             <div id="email">
               <label>Email</label>
-              <input
+              <input className={styles.names}
                 type="email"
                 ref={emailRef}
                 required
@@ -59,7 +59,7 @@ export default function UpdateProfile() {
             </div>
             <div id="password">
               <label>Password</label>
-              <input
+              <input className={styles.names}
                 type="password"
                 ref={passwordRef}
                 placeholder="Leave blank to keep the same"
@@ -67,7 +67,7 @@ export default function UpdateProfile() {
             </div>
             <div id="password-confirm">
               <label>Password Confirmation</label>
-              <input
+              <input className={styles.names}
                 type="password"
                 ref={passwordConfirmRef}
                 placeholder="Leave blank to keep the same"

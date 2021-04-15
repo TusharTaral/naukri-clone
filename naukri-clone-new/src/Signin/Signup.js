@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react"
-//import { Form, Button, Card, Alert } from "react-bootstrap"
+import styles from "./Signup.module.css"
 import { useAuth } from "./contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 
@@ -23,7 +23,7 @@ export default function Signup() {
       setError("")
       setLoading(true)
       await signup(emailRef.current.value, passwordRef.current.value)
-      history.push("/")
+      history.push("/login")
     } catch {
       setError("Failed to create an account")
     }
@@ -32,33 +32,33 @@ export default function Signup() {
   }
 
   return (
-    <>
-      <div>
-        <div>
-          <h2 className="text-center mb-4">Sign Up</h2>
+    <div className={styles.outer}>
+      <div >
+       
+          <h1 className={styles.regi}>Sign Up</h1>
           {error && <p variant="danger">{error}</p>}
-          <form onSubmit={handleSubmit}>
-            <div id="email">
-              <label>Email</label>
-              <input type="email" ref={emailRef} required />
+          <form onSubmit={handleSubmit} className={styles.form}>
+            <div className={styles.outerName}  id="email">
+              
+              <input placeholder="Email" className={styles.names}  type="email" ref={emailRef} required />
             </div>
-            <div id="password">
-              <label>Password</label>
-              <input type="password" ref={passwordRef} required />
+            <div className={styles.outerName}  id="password">
+            
+              <input placeholder="Password"  className={styles.names}  type="password" ref={passwordRef} required />
             </div>
-            <div id="password-confirm">
-              <label>Password Confirmation</label>
-              <input type="password" ref={passwordConfirmRef} required />
+            <div className={styles.outerName}  id="password-confirm">
+             
+              <input placeholder="Password Confirmation"   className={styles.names}  type="password" ref={passwordConfirmRef} required />
             </div>
-            <button disabled={loading} className="w-100" type="submit">
+            <button disabled={loading} className={styles.btn}  type="submit">
               Sign Up
             </button>
           </form>
         </div>
-      </div>
-      <div className="w-100 text-center mt-2">
+      
+      <h4 lassName={styles.acc} >
         Already have an account? <Link to="/login">Log In</Link>
-      </div>
-    </>
+      </h4>
+    </div>
   )
 }

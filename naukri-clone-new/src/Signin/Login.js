@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react"
-//import { Form, Button, Card, Alert } from "react-bootstrap"
+
 import { useAuth } from "./contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import styles from "./Login.module.css"
 
 export default function Login() {
   const emailRef = useRef()
@@ -27,32 +28,32 @@ export default function Login() {
   }
 
   return (
-    <>
-      <div>
+    <div className={styles.outer}>
+      
         <div>
-          <h2 className="text-center mb-4">Log In</h2>
+          <h1 className={styles.regi}>Log In</h1>
           {error && <p variant="danger">{error}</p>}
           <form onSubmit={handleSubmit}>
-            <div id="email">
-              <label>Email</label>
-              <input type="email" ref={emailRef} required />
+            <div className={styles.outerName} id="email">
+             
+              <input className={styles.names}  placeholder="Email" type="email" ref={emailRef} required />
             </div>
-            <div id="password">
-              <label>Password</label>
-              <input type="password" ref={passwordRef} required />
+            <div className={styles.outerName} id="password">
+              
+              <input className={styles.names}  placeholder="Password" type="password" ref={passwordRef} required />
             </div>
-            <button disabled={loading} className="w-100" type="submit">
+            <button disabled={loading} className={styles.btn} type="submit">
               Log In
             </button>
           </form>
-          <div className="w-100 text-center mt-3">
+          <div lassName={styles.acc} >
             <Link to="/forgot-password">Forgot Password?</Link>
           </div>
         </div>
-      </div>
-      <div className="w-100 text-center mt-2">
+    
+      <h4 lassName={styles.acc} >
         Need an account? <Link to="/signup">Sign Up</Link>
-      </div>
-    </>
+      </h4>
+    </div>
   )
 }
