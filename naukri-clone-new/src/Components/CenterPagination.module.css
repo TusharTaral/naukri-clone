@@ -1,14 +1,13 @@
 
 .background{
     height: 200px;
-    margin-top: 0px;
+    margin-top: 15px;
     position:relative; 
     min-width: max-content;
     width: 50vw;
-    margin-left: 20vw;
   } 
   .header {
-      width: 100%;
+      width: 106%;
       min-height: 80px;  
       position: relative;
       font-family: HCoGothamSSmSemiBold, Arial, Sans-Serif;
@@ -104,7 +103,7 @@
     } 
     
     .menu_two{
-        margin-left: -23.4%;
+        margin-left: -24.4%;
         justify-content: space-around;
     }
 
@@ -113,11 +112,11 @@
       margin-left: -8%;
     }
     .menu_three{
-      margin-left: -50.7%;
+      margin-left: -53.6%;
       justify-content: space-around;
     }
     .menu_four{
-       margin-left: -34.7vw;
+       margin-left: -36.5vw;
        justify-content: space-around;
     }
     .menu_two > ul li {

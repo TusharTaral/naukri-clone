@@ -1,11 +1,19 @@
 .div1
 {
-    width:22%;
-    height:22%;
+    width:60%;
     border: 1px solid grey;
     border-radius: 1%;
-    margin: 100px;
-    padding:0.5%;
+    padding:2%;
+    margin: 30px;  
+    margin-left: 90px;
+    color: #091e42;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 400;
+    line-height:23px;
+    text-align: left;
+    margin-top: 5px;
+    
 }
 .flex
 {
@@ -15,13 +23,15 @@
     width:100%;
     height:40px;
     border: 1px solid grey;
-    margin-bottom: 7%;
+    margin-bottom: 5%;
+    margin-top:15px;
 }
 .input>input{
     width:80%;
     border: 0px;
     height:35px;
     padding: 1px;
+
 }
 .btn
 {
@@ -30,6 +40,8 @@
     background-color: #4a90e2;
     border: 0px;
     color: white;
+    margin-top:5px;
+    margin-bottom:15px;
 }
 .btn1
 {
@@ -47,4 +59,14 @@
 .btn1:hover
 {
     background-color: #2a78d1;
+}
+.btn2
+{
+    width: 300px;
+    height: 35px;
+    background-color:white;
+    border: 1px solid  #4a90e2;
+    color: #4a90e2 ;
+    font-size: 15px;
+    margin: 5px;
 }
