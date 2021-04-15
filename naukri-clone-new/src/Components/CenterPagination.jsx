@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./CenterPagination.module.css";
 import styled from "styled-components"
-
+// import { CenterPagination2 } from "./CenterPagination2";
  const Div = styled.div`
  color:${(props)=>
   props.color==="selected"}
@@ -43,6 +43,7 @@ export function CenterPagination(){
     return(
         <>
         <div className={styles.background}>
+        <h2 style={{margin:"20px"}}>Best place to work</h2>
         <header className={styles.header}>
         <ul className={styles.navbar} >
             <li className={styles.drop_one}>
@@ -328,6 +329,7 @@ export function CenterPagination(){
             </li>
         </ul>
     </header>
+  {/* //  <CenterPagination2/> */}
     </div>
         </>
     )
