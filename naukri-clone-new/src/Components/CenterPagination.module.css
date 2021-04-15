@@ -1,15 +1,13 @@
 
 .background{
     height: 200px;
-    margin-top: 0px;
+    margin-top: 15px;
     position:relative; 
-    background-color: brown;
     min-width: max-content;
     width: 50vw;
-    margin-left: 20vw;
-  }
+  } 
   .header {
-      width: 100%;
+      width: 106%;
       min-height: 80px;  
       position: relative;
       font-family: HCoGothamSSmSemiBold, Arial, Sans-Serif;
@@ -17,13 +15,13 @@
       /* margin-bottom: -55px; */
       /* position: sticky;
       top: 100px; */
-      background-color: coral;
+     
     }
     .navbar {
       padding-top: 12px;
       padding-bottom: 20px;
       position: relative;
-      background-color: chartreuse;
+      background-color: rgb(230, 230, 230);
       box-shadow: 0 0 3px rgb(216, 213, 213);
     }
     .navbar >.image{
@@ -41,12 +39,12 @@
       display: inline-block;
       line-height: 20px;
     }
-   
-    .navbar > li:hover {
-      border-bottom: 3px solid #0d21d3;
-      transition: 10s;
-    }
-    
+   /* .drop_one{
+    list-style: none;
+    display: inline-block;
+    line-height: 20px;
+   } */
+     
     .header span {
       padding: 10px 20px;
       color: rgb(116, 114, 114);
@@ -80,23 +78,10 @@
       box-shadow: 0 0 3px rgb(216, 213, 213);
       padding-top: 10px; 
       transition: 0.5s;
-    }
-    
-    .menu_experiment{
-      display: none;
-    }
-  
-    .drop_one:hover >.menu_experiment,
-    .drop_two:hover > .menu_experiment,
-    .drop_three:hover > .menu_experiment,
-    .drop_four:hover > .menu_experiment,
-    .drop_five:hover > .menu_experiment,
-    .drop_six:hover > .menu_experiment,
-    .drop_seven:hover > .menu_experiment {
-      display: block; 
-      z-index: 10;
       margin-top: 15px;
     }
+    
+    
     .menu_one > ul li:hover,
     .menu_two > ul li:hover,
     .menu_three > ul li:hover,
@@ -118,7 +103,7 @@
     } 
     
     .menu_two{
-        margin-left: -23.4%;
+        margin-left: -24.4%;
         justify-content: space-around;
     }
 
@@ -127,11 +112,11 @@
       margin-left: -8%;
     }
     .menu_three{
-      margin-left: -50.7%;
+      margin-left: -53.6%;
       justify-content: space-around;
     }
     .menu_four{
-       margin-left: -34.7vw;
+       margin-left: -36.5vw;
        justify-content: space-around;
     }
     .menu_two > ul li {

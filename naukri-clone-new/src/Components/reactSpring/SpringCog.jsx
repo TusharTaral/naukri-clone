@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { CenterPagination } from "../CenterPagination";
 import styles from "./SpringCog.module.css"
+import { CenterPagination2 } from "../CenterPagination2";
 
 export  const SpringCog = () => {
   const   img=[ 
@@ -87,7 +89,36 @@ export  const SpringCog = () => {
             <img  className={styles.compName} src={img[4][state2]}></img>
             <img  className={styles.compName} src={img[5][state]}></img>
          </div>
+         <div style={{display:"flex"}}>
          <div className={styles.hiring2}>
+            <img  className={styles.compName2}  src={img2[0][state2]}></img>
+            <img  className={styles.compName2} src={img2[1][state]}></img>
+            <img  className={styles.compName2} src={img2[2][state2]}></img>
+            <img  className={styles.compName2} src={img2[3][state]}></img>
+            <img  className={styles.compName2} src={img2[4][state2]}></img>
+            <img  className={styles.compName2} src={img2[5][state]}></img>
+            <img  className={styles.compName} src={img[4][state2]}></img>
+            <img  className={styles.compName} src={img[2][state]}></img>
+            <img  className={styles.compName2} src={img2[6][state2]}></img>
+            <img  className={styles.compName2} src={img2[7][state]}></img>
+            <img  className={styles.compName2} src={img2[8][state2]}></img>
+            <img  className={styles.compName2} src={img2[9][state2]}></img>
+            <img  className={styles.compName2} src={img2[10][state]}></img>
+            <img  className={styles.compName2} src={img2[11][state2]}></img>
+            <img  className={styles.compName2}  src={img2[0][state2]}></img>
+            <img  className={styles.compName2} src={img2[1][state]}></img>
+            <img  className={styles.compName2} src={img2[2][state2]}></img>
+            <img  className={styles.compName2} src={img2[3][state]}></img>
+            <img  className={styles.compName2} src={img2[4][state2]}></img>
+            <img  className={styles.compName2} src={img2[5][state]}></img>
+            <img  className={styles.compName} src={img[4][state2]}></img>
+            <img  className={styles.compName} src={img[2][state]}></img>
+            <img  className={styles.compName2} src={img2[6][state2]}></img>
+            <img  className={styles.compName2} src={img2[7][state]}></img>
+            <img  className={styles.compName2} src={img2[8][state2]}></img>
+            <img  className={styles.compName2} src={img2[9][state2]}></img>
+            <img  className={styles.compName2} src={img2[10][state]}></img>
+            <img  className={styles.compName2} src={img2[11][state2]}></img>
             <img  className={styles.compName2}  src={img2[0][state2]}></img>
             <img  className={styles.compName2} src={img2[1][state]}></img>
             <img  className={styles.compName2} src={img2[2][state2]}></img>
@@ -104,6 +135,12 @@ export  const SpringCog = () => {
             <img  className={styles.compName2} src={img2[11][state2]}></img>
             {/* <img  className={styles.compName2} src={img2[12][state]}></img> */}
          </div>
+                <CenterPagination/>
+           
+   
+         </div>
+         
+ 
     </div>
   );
   };

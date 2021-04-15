@@ -1,22 +1,55 @@
 import React from "react";
 import styles from "./CenterPagination.module.css";
 import styled from "styled-components"
+// import { CenterPagination2 } from "./CenterPagination2";
+const Div = styled.div`
+ color:${(props) =>
+        props.color === "selected"}
+ `
+
 export function CenterPagination() {
-
-    const Div = styled.div`
-
-        `
+    const [state, setState] = React.useState("")
+    const [showResults, setShowResults] = React.useState(true)
+    const handleAll = () => {
+        setShowResults(true)
+        setShowResults1(false)
+        setShowResults2(false)
+        setShowResults3(false)
+    }
+    console.log(state)
+    const [showResults1, setShowResults1] = React.useState(false)
+    const handleIf = () => {
+        setShowResults(false)
+        setShowResults1(true)
+        setShowResults2(false)
+        setShowResults3(false)
+    }
+    const [showResults2, setShowResults2] = React.useState(false)
+    const handleMan = () => {
+        setShowResults(false)
+        setShowResults1(false)
+        setShowResults2(true)
+        setShowResults3(false)
+    }
+    const [showResults3, setShowResults3] = React.useState(false)
+    const handleService = () => {
+        setShowResults(false)
+        setShowResults1(false)
+        setShowResults2(false)
+        setShowResults3(true)
+    }
 
 
     return (
         <>
             <div className={styles.background}>
+                <h2 style={{ margin: "20px" }}>Best place to work</h2>
                 <header className={styles.header}>
                     <ul className={styles.navbar} >
-
                         <li className={styles.drop_one}>
-                            <span>All Sectors</span>
-                            <div className={styles.menu_experiment}>
+                            <span onClick={handleAll}>All Sectors</span>
+
+                            {showResults ? <div>
                                 <div className={styles.menu_one}>
                                     <ul>
                                         <li><h3>Information Technology</h3></li>
@@ -135,10 +168,12 @@ export function CenterPagination() {
                                     </ul>
                                 </div>
                             </div>
+                                : null}
                         </li>
+
                         <li className={styles.drop_two}>
-                            <span>Information Technology</span>
-                            <div className={styles.menu_experiment}>
+                            <span onClick={handleIf}>Information Technology</span>
+                            {showResults1 ? <div >
                                 <div className={styles.menu_two}>
                                     <ul>
                                         <li><h3>Information Technology</h3></li>
@@ -199,10 +234,11 @@ export function CenterPagination() {
                                     </ul>
                                 </div>
                             </div>
+                                : null}
                         </li>
                         <li className={styles.drop_three}>
-                            <span>Manufacturing</span>
-                            <div className={styles.menu_experiment}>
+                            <span onClick={handleMan}>Manufacturing</span>
+                            {showResults2 ? <div className={styles.menu_experiment}>
                                 <div className={styles.menu_three}>
                                     <ul>
                                         <li><h3>Manufacturing</h3></li>
@@ -257,10 +293,11 @@ export function CenterPagination() {
                                     </ul>
                                 </div>
                             </div>
+                                : null}
                         </li>
                         <li className={styles.drop_four}>
-                            <span>Services</span>
-                            <div className={styles.menu_experiment}>
+                            <span onClick={handleService}>Services</span>
+                            {showResults3 ? <div >
                                 <div className={styles.menu_four}>
                                     <ul>
                                         <li><h3>Services</h3></li>
@@ -288,9 +325,11 @@ export function CenterPagination() {
                                     </ul>
                                 </div>
                             </div>
+                                : null}
                         </li>
                     </ul>
                 </header>
+                {/* //  <CenterPagination2/> */}
             </div>
         </>
     )
