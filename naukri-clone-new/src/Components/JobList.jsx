@@ -1,6 +1,6 @@
 import React from 'react'
 import './JobList.css'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 
 export const JobList = () => {
     const jobs = useSelector(state => state.job.jobs)

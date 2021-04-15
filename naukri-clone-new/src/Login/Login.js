@@ -57,6 +57,7 @@ export default function Login() {
                     case "auth/weak-password":
                         setPasswordError(err.message)
                         break;
+                        
 
 
                 }
