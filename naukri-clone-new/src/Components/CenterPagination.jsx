@@ -16,7 +16,7 @@ export function CenterPagination() {
         setShowResults2(false)
         setShowResults3(false)
     }
-    console.log(state)
+   
     const [showResults1, setShowResults1] = React.useState(false)
     const handleIf = () => {
         setShowResults(false)
@@ -329,7 +329,7 @@ export function CenterPagination() {
                         </li>
                     </ul>
                 </header>
-                {/* //  <CenterPagination2/> */}
+               
             </div>
         </>
     )
