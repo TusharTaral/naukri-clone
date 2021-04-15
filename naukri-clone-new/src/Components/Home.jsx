@@ -20,11 +20,8 @@ import SideDiv9 from './SideDiv9'
 const Home = () => {
   return (
     <div>
-      <Navbar className={styled.display} />
+  
       <FirstDiv className={styled.display1}></FirstDiv>
-
-      <SpringCog/>
-     
 
       <div style={{ display: "flex" }}>
         <div>
