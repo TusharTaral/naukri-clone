@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { CenterPagination } from "../CenterPagination";
 import styles from "./SpringCog.module.css"
 
 export  const SpringCog = () => {
@@ -87,6 +88,7 @@ export  const SpringCog = () => {
             <img  className={styles.compName} src={img[4][state2]}></img>
             <img  className={styles.compName} src={img[5][state]}></img>
          </div>
+         <div style={{display:"flex"}}>
          <div className={styles.hiring2}>
             <img  className={styles.compName2}  src={img2[0][state2]}></img>
             <img  className={styles.compName2} src={img2[1][state]}></img>
@@ -104,6 +106,9 @@ export  const SpringCog = () => {
             <img  className={styles.compName2} src={img2[11][state2]}></img>
             {/* <img  className={styles.compName2} src={img2[12][state]}></img> */}
          </div>
+         <CenterPagination/>
+         </div>
+ 
     </div>
   );
   };

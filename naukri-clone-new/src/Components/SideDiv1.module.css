@@ -1,0 +1,50 @@
+.div1
+{
+    width:22%;
+    height:22%;
+    border: 1px solid grey;
+    border-radius: 1%;
+    margin: 100px;
+    padding:0.5%;
+}
+.flex
+{
+    display: flex;
+}
+.input{
+    width:100%;
+    height:40px;
+    border: 1px solid grey;
+    margin-bottom: 7%;
+}
+.input>input{
+    width:80%;
+    border: 0px;
+    height:35px;
+    padding: 1px;
+}
+.btn
+{
+    width:100%;
+    height:40px;
+    background-color: #4a90e2;
+    border: 0px;
+    color: white;
+}
+.btn1
+{
+    width:60%;
+    height:40px;
+    background-color: #4a90e2;
+    border: 0px;
+    color: white;
+    margin-top: 15px;
+}
+.btn:hover
+{
+    background-color: #2a78d1;
+}
+.btn1:hover
+{
+    background-color: #2a78d1;
+}
