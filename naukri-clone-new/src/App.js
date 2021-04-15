@@ -1,15 +1,11 @@
-import './App.css'
-import { SpringCog } from './Components/reactSpring/SpringCog'
-import { Register } from './Components/Register'
 
+import { Routes } from "./Components/Routes";
 
-import './App.css';
-import Home from './Components/Home';
 
 function App() {
   return (
-    <div className="App">
-      <Home/>
+    <div>
+      <Routes />
     </div>
   );
 }
