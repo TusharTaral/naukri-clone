@@ -7,7 +7,7 @@
     min-width: max-content;
     width: 50vw;
     margin-left: 20vw;
-  }
+  } 
   .header {
       width: 100%;
       min-height: 80px;  
@@ -41,12 +41,12 @@
       display: inline-block;
       line-height: 20px;
     }
-   
-    .navbar > li:hover {
-      border-bottom: 3px solid #0d21d3;
-      transition: 10s;
-    }
-    
+   /* .drop_one{
+    list-style: none;
+    display: inline-block;
+    line-height: 20px;
+   } */
+     
     .header span {
       padding: 10px 20px;
       color: rgb(116, 114, 114);
@@ -80,23 +80,10 @@
       box-shadow: 0 0 3px rgb(216, 213, 213);
       padding-top: 10px; 
       transition: 0.5s;
-    }
-    
-    .menu_experiment{
-      display: none;
-    }
-  
-    .drop_one:hover >.menu_experiment,
-    .drop_two:hover > .menu_experiment,
-    .drop_three:hover > .menu_experiment,
-    .drop_four:hover > .menu_experiment,
-    .drop_five:hover > .menu_experiment,
-    .drop_six:hover > .menu_experiment,
-    .drop_seven:hover > .menu_experiment {
-      display: block; 
-      z-index: 10;
       margin-top: 15px;
     }
+    
+    
     .menu_one > ul li:hover,
     .menu_two > ul li:hover,
     .menu_three > ul li:hover,
