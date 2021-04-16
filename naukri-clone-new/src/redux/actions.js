@@ -22,7 +22,7 @@ export const getJobFailure = () => {
 
 //for searching on homepage
 export const getJobs = (job, location) => (dispatch) => {
-    dispatch(getJobRequest());
+    dispatch(getJobRequest())
 
     if (job !== '' && location !== '') {
         return axios.get('https://json-server-vedanshw.herokuapp.com/naukri', {
@@ -47,6 +47,8 @@ export const getJobs = (job, location) => (dispatch) => {
 
 //sort by location
 export const getJobsByLocation = (job, loc1) => (dispatch) => {
+    dispatch(getJobRequest())
+
     if (loc1 !== '') {
         return axios.get('https://json-server-vedanshw.herokuapp.com/naukri', {
             params: {
@@ -68,11 +70,14 @@ export const getJobsByLocation = (job, loc1) => (dispatch) => {
 }
 //sort by rating
 export const getJobsByRating = (job, num, location) => (dispatch) => {
-    if (num === 0) { var gte = 0; var lte = 1 }
-    else if (num === 1) { var gte = 1; var lte = 2 }
-    else if (num === 2) { var gte = 2; var lte = 3 }
-    else if (num === 3) { var gte = 3; var lte = 4 }
-    else if (num == 4) { var gte = 4; var lte = 5 }
+    var gte; var lte
+    if (num === 0) { gte = 0; lte = 1 }
+    else if (num === 1) { gte = 1; lte = 2 }
+    else if (num === 2) { gte = 2; lte = 3 }
+    else if (num === 3) { gte = 3; lte = 4 }
+    else if (num == 4) { gte = 4; lte = 5 }
+
+    dispatch(getJobRequest())
 
     if (location !== '') {
         return axios.get('https://json-server-vedanshw.herokuapp.com/naukri', {
@@ -102,6 +107,8 @@ export const getJobsByRating = (job, num, location) => (dispatch) => {
 //sort by date 
 
 export const getJobsByDate = (job, location, value) => (dispatch) => {
+    dispatch(getJobRequest())
+
     if (location !== '') {
         return axios.get('https://json-server-vedanshw.herokuapp.com/naukri', {
             params: {
@@ -120,6 +127,51 @@ export const getJobsByDate = (job, location, value) => (dispatch) => {
                 q: job,
                 _sort: 'date',
                 _order: value
+            }
+        })
+            .then(res => dispatch(getJobSuccess(res.data)))
+            .catch(err => dispatch(getJobFailure()))
+    }
+}
+
+//filtering by experience
+
+export const getJobsByExp = (job, location, num) => (dispatch) => {
+    var gte; var lte
+    if (num === 0) { gte = 0; lte = 2 }
+    else if (num === 1) { gte = 0; lte = 3 }
+    else if (num === 2) { gte = 1; lte = 3 }
+    else if (num === 3) { gte = 2; lte = 4 }
+    else if (num == 4) { gte = 3; lte = 5 }
+    else if (num == 5) { gte = 4; lte = 7 }
+    else if (num == 6) { gte = 5; lte = 8 }
+    else if (num == 7) { gte = 6; lte = 9 }
+    else if (num == 8) { gte = 7; lte = 10 }
+    else if (num == 9) { gte = 8; lte = 10 }
+    else if (num == 10) { gte = 9; lte = 12 }
+    else if (num == 11) { gte = 10; lte = 12 }
+    else if (num == 12) { gte = 11; lte = 13 }
+
+    dispatch(getJobRequest())
+
+    if (location !== '') {
+        return axios.get('https://json-server-vedanshw.herokuapp.com/naukri', {
+            params: {
+                q: job,
+                location: location,
+                experience_gte: gte,
+                experience_lte: lte
+            }
+        })
+            .then(res => dispatch(getJobSuccess(res.data)))
+            .catch(err => dispatch(getJobFailure()))
+    }
+    else {
+        return axios.get('https://json-server-vedanshw.herokuapp.com/naukri', {
+            params: {
+                q: job,
+                experience_gte: gte,
+                experience_lte: lte
             }
         })
             .then(res => dispatch(getJobSuccess(res.data)))

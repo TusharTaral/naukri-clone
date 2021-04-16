@@ -36,8 +36,8 @@ export const SideBar = () => {
             dispatch(getJobsByLocation(skill, name))
         } else {
             let loc = ''
-            setLocation('')
             dispatch(getJobsByLocation(skill, loc))
+            location = ''
         }
     }
 
@@ -45,11 +45,9 @@ export const SideBar = () => {
         const { name, checked } = e.target;
         let num = Number(name)
         if (checked) {
-            let loc = location
-            dispatch(getJobsByRating(skill, num, loc))
+            dispatch(getJobsByRating(skill, num, location))
         } else {
-            let loc = location
-            dispatch(getJobsByLocation(skill, loc))
+            dispatch(getJobsByLocation(skill, location))
         }
 
     }
@@ -104,8 +102,7 @@ export const SideBar = () => {
                 <h5 className='filterTitle'>Experience</h5>
                 <div className='itemDiv'>
                     <div style={{ width: '70%', marginTop: '50px', marginLeft: '10px' }}>
-                        <Slider style={{ border: 'none' }}
-                            className='slider'
+                        <Slider
                             defaultValue={exp}
                             aria-labelledby="discrete-slider"
                             valueLabelDisplay="on"

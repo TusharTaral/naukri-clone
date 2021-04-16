@@ -2,28 +2,22 @@
 import React, { useContext, useEffect, useState } from 'react'
 import styled from "./MapDiv.module.css"
 import { useSelector } from 'react-redux'
-
+import { Link } from "react-router-dom"
 import { SkeletonMapDiv } from '../Skeleton/SkeletonMapDiv'
-
-const MapDiv = () => {
-    const loading = useSelector(state => state.job.isLoading)
 import { AuthContext } from './Register/AuthContextProvider'
 
-import {Link} from "react-router-dom"
-
 
 const MapDiv = () => {
-<<<<<<< HEAD
-    const[count,setCount]=React.useState(0)
-=======
- const {count,setCount} =useContext(AuthContext)
->>>>>>> 99f3c8f727a391c04d4f6c4e9d6d750ae9280696
-    const handleCount=()=>
-    {
-        setCount(count+1)
+
+    const { count, setCount } = useContext(AuthContext)
+    const handleCount = () => {
+        setCount(prev => prev + 1)
+
     }
 
     const data = useSelector(state => state.job.jobs)
+    const loading = useSelector(state => state.job.isLoading)
+
 
     if (data.length === 0 && !loading) {
         return (
@@ -41,15 +35,14 @@ const MapDiv = () => {
                 data && data.map(el => (
 
                     <div className={styled.box} key={el.id}>
-                   <Link  to ={`/search/${el.skill}/${el.id}`} push >
-                    <div className={styled.box}>
-
-                        <h2 className={styled.companyName}>{el.companyName}</h2>
+                        <Link to={`/search/${el.skill}/${el.id}`} push >
+                            <h2 className={styled.companyName}>{el.companyName}</h2>
+                        </Link>
                         <div className={styled.ratingDiv}>
                             <h5 className={styled.skill} >{el.skill}</h5>
                             <div className={styled.ratingDivTwo}>
                                 <div><h5 className={styled.skill, styled.rating}>{el.rating}</h5></div>
-                                <div> <img className={styled.img} src="https://img.icons8.com/emoji/48/000000/star-emoji.png" alt ="star"/></div>
+                                <div> <img className={styled.img} src="https://img.icons8.com/emoji/48/000000/star-emoji.png" alt="star" /></div>
                             </div>
                         </div>
 
@@ -97,7 +90,6 @@ const MapDiv = () => {
                            )} */}
                             </div>
 
-
                             <div className={styled.flex} style={{ marginLeft: "61%" }}>
                                 <div>
                                     <img className={styled.img} src="https://img.icons8.com/metro/50/000000/star.png" alt="" />
@@ -106,10 +98,11 @@ const MapDiv = () => {
                             </div>
                         </div>
                     </div>
-                    </Link>
+
                 ))
             }
         </div>
+
     ) :
         (
             <div className={styled.container}>
