@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { AuthContext } from './AuthContextProvider'
-import styles from "./Register.module.css"
+import styles from "./Education.module.css"
+import SigninNavbar from './SigninNavbar'
 const Education = () => {
     const { form, setForm, data, setData} = useContext(AuthContext)
     const handleChange = (e) => {
@@ -35,10 +36,12 @@ const Education = () => {
       }
     }
     return (
-        <div>
+        <>
+        <SigninNavbar/>
+        <div className={styles.outer}>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Education :</div>
-                <select onChange={handleChange} name="education">
+                <select className={styles.margin} onChange={handleChange} name="education">
                     <option value="PG">Post Graduation</option>
                     <option value="G">Graduation</option>
                     <option value="LESS10">less than 10th</option>
@@ -48,7 +51,7 @@ const Education = () => {
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Course :</div>
-                <select onChange={handleChange} name="course">
+                <select className={styles.margin} onChange={handleChange} name="course">
                     <option value="CS">ENGINEERING</option>
                     <option value="BSC">BSC</option>
                     <option value="BCOM">BCOM</option>
@@ -56,7 +59,7 @@ const Education = () => {
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Specilization :</div>
-                <select onChange={handleChange} name="specilization">
+                <select className={styles.margin} onChange={handleChange} name="specilization">
                     <option value="CS">COMPUTER ENGINEERING</option>
                     <option value="EE">ELECTRONICE ENGINEERING</option>
                     <option value="ME">MECHANICAL ENGINEERING</option>
@@ -65,6 +68,7 @@ const Education = () => {
                 </select>
             </div>
             <div className={styles.flex}>
+
                 <div className={styles.margin1}>univercity :</div>
                 <input className={styles.margin} placeholder="univercity" name="univercity" value={form.univercity} onChange={handleChange} type="text" />
             </div>
@@ -75,22 +79,20 @@ const Education = () => {
             <div className={styles.flex}>
                 <div className={styles.margin1}>Passing Year :</div>
                 <input className={styles.margin} placeholder="passing year" name="passing" value={form.passing} onChange={handleChange} type="number" />
+
             </div>
             <div className={styles.flex}>
-                <div className={styles.margin1}>marks :</div>
-                <select onChange={handleChange} name="type">
+                <div className={styles.margin1}>Course Type :</div>
+                <select className={styles.margin} onChange={handleChange} name="type">
                     <option value="full">Full Time</option>
                     <option value="part">Part Time</option>
                     <option value="D">Distance</option>
                 </select>
             </div>
-            <button style={{
-                margin: "20px", backgroundColor: "slateblue",
-                width: "150px", height: "50px", borderRadius: "10px",
-                marginLeft: "700px"
-            }} onClick={handleSubmit}>Register
+            <button className={styles.btn} onClick={handleSubmit}>Register
      </button>
         </div>
+        </>
     )
 }
 

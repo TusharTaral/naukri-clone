@@ -3,7 +3,6 @@ import { CenterPagination } from "../CenterPagination";
 import styles from "./SpringCog.module.css"
 
 
-
 export  const SpringCog = () => {
   const   img=[ 
           [ "https://logos-download.com/wp-content/uploads/2019/01/Cognizant_Technology_Solutions_Corp_Logo.png",

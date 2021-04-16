@@ -2,7 +2,7 @@
 {
     display: flex;
     justify-content: space-between;
-    width: 700px;
+    width: 650px;
     margin: auto;
     
 }
@@ -11,9 +11,21 @@
     width: 500px;
     height: 45px;
     margin: 10px;
-    padding: 1px 5px;
+   
     border: none;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.margin2
+{
+    width: 490px;
+    height: 45px;
+    margin: 10px;
+   padding: 2px 5px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.margin2:focus{
+    outline:none
 }
 .margin:focus{
     outline:none
@@ -24,8 +36,8 @@
     margin:20px 10px;
 }
 .outer{
-    margin-top: 3rem;
-    text-align: center;
+    margin-top: 1rem;
+   text-align: center;
 }
 .btn{
     margin: 20px;
@@ -33,7 +45,7 @@
     width: 250px;
      height: 50px; 
      border-radius: 10px;
-    margin-left:130px;
+    margin-left:160px;
     font-size: 17px;
     border: none;
 }
