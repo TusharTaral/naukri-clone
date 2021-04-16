@@ -10,7 +10,6 @@ import Education from "./Components/Register/Education";
 import Personal from "./Components/Register/Personal";
 
 
-
 function App() {
   return (
     <div>
@@ -29,6 +28,9 @@ function App() {
       {/* <Routes/> */}
       {/* <SigninNavbar/> */}
       {/* <Routes /> */}
+
+ 
+
       {/* <Personal/> */}
       <Education/>
       {/* <Personal/> */}
