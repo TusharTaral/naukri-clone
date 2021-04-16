@@ -15,7 +15,8 @@ export const JobDescription=()=>{
     console.log(job)
     React.useEffect(()=>{
         dispatch(getJobById(id));
-    },[])  
+    },[]) 
+    console.log(data) 
     return(
         <>
            <div className={styles.container}>

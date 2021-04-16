@@ -20,13 +20,11 @@ export const Routes = () => {
                 <Route exact path='/search/:job'>
                     <SearchResultPage />
                 </Route>
-
                 <Route path='/search/:job/:id'>
                      <JobDescription/>
-
+                </Route>
                 <Route exact path='/login'>
                     <Login />
-
                 </Route>
             </Switch>
         </div>

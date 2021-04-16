@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import {Link} from "react-router-dom"
 
 const MapDiv = () => {
-    const[count,setCount]=useState(0)
+    const[count,setCount]=React.useState(0)
     const handleCount=()=>
     {
         setCount(count+1)
