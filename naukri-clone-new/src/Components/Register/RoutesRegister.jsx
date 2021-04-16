@@ -9,12 +9,7 @@ const RoutesRegister = () => {
   return (
     <div>
 
-      <Link to="/">
-
-      </Link>
-      <Link to="/">
-
-</Link>
+   
       <Link to="/education">
 
       </Link>

@@ -82,3 +82,7 @@
         color: blue;
         font-size: 15px;
     }
+    .searchJob:focus{
+        /* outline: none; */
+       
+    }
