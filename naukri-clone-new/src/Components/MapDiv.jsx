@@ -4,7 +4,11 @@ import { useSelector } from 'react-redux'
 import {Link} from "react-router-dom"
 
 const MapDiv = () => {
-
+    const[count,setCount]=useState(0)
+    const handleCount=()=>
+    {
+        setCount(count+1)
+    }
     const data = useSelector(state => state.job.jobs)
 
     return (
@@ -71,7 +75,7 @@ const MapDiv = () => {
                                 <div>
                                     <img className={styled.img} src="https://img.icons8.com/metro/50/000000/star.png" alt="" />
                                 </div>
-                                <div className={styled.subs}>save</div>
+                                <div onClick={handleCount} className={styled.subs}>save</div>
                             </div>
                         </div>
                     </div>

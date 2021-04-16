@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import styles from "./Signup.module.css"
 import { useAuth } from "./contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
+import SigninNavbar from "./SigninNavbar"
 
 export default function Signup() {
   const emailRef = useRef()
@@ -32,11 +33,13 @@ export default function Signup() {
   }
 
   return (
+    <>
+    <SigninNavbar/>
     <div className={styles.outer}>
       <div >
        
           <h1 className={styles.regi}>Sign Up</h1>
-          {error && <p variant="danger">{error}</p>}
+          {error && <p className={styles.err}>{error}</p>}
           <form onSubmit={handleSubmit} className={styles.form}>
             <div className={styles.outerName}  id="email">
               
@@ -56,9 +59,10 @@ export default function Signup() {
           </form>
         </div>
       
-      <h4 lassName={styles.acc} >
-        Already have an account? <Link to="/login">Log In</Link>
+      <h4 className={styles.acc} >
+        Already have an account? <Link className={styles.link}  to="/login"><h4  className={styles.link} >Log In</h4></Link>
       </h4>
     </div>
+    </>
   )
 }
