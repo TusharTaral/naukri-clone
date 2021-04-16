@@ -1,7 +1,11 @@
+
 import React, { useContext, useEffect, useState } from 'react'
 import styled from "./MapDiv.module.css"
 import { useSelector } from 'react-redux'
 import { AuthContext } from './Register/AuthContextProvider'
+
+import {Link} from "react-router-dom"
+
 
 const MapDiv = () => {
  const {count,setCount} =useContext(AuthContext)
@@ -15,14 +19,14 @@ const MapDiv = () => {
         <div className={styled.container}>
             {
                 data && data.map(el => (
-
+                   <Link  to ={`/search/${el.skill}/${el.id}`} push >
                     <div className={styled.box}>
                         <h2 className={styled.companyName}>{el.companyName}</h2>
                         <div className={styled.ratingDiv}>
                             <h5 className={styled.skill} >{el.skill}</h5>
                             <div className={styled.ratingDivTwo}>
                                 <div><h5 className={styled.skill, styled.rating}>{el.rating}</h5></div>
-                                <div> <img className={styled.img} src="https://img.icons8.com/emoji/48/000000/star-emoji.png" /></div>
+                                <div> <img className={styled.img} src="https://img.icons8.com/emoji/48/000000/star-emoji.png" alt ="star"/></div>
                             </div>
                         </div>
 
@@ -79,7 +83,7 @@ const MapDiv = () => {
                             </div>
                         </div>
                     </div>
-
+                    </Link>
                 ))
             }
 
