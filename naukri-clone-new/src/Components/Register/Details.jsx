@@ -42,7 +42,7 @@ const Details = () => {
             alert("Enter all data");
         }
     }
-    return (
+    return !flag?(
         <>
         <SigninNavbar/>
 
@@ -120,10 +120,11 @@ const Details = () => {
             <button className={styles.btn} onClick={handleSubmit}>Register
      </button>
         </div>
+        </>
     ):
     (
         <Redirect to="/profile"/>
-        </>
+       
     )
 }
 
