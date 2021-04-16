@@ -1,9 +1,11 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
+import { Redirect } from 'react-router-dom'
 import { AuthContext } from './AuthContextProvider'
 import styles from "./Education.module.css"
 import SigninNavbar from './SigninNavbar'
 const Education = () => {
     const { form, setForm, data, setData} = useContext(AuthContext)
+    const [flag,setFlag]=useState(false)
     const handleChange = (e) => {
         const { name, value } = e.target
         let paylaod = {
@@ -15,7 +17,7 @@ const Education = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         if (form.education !== "" && form.course!== ""&&form.specilization!==""&&form.univercity!==""
-        && form.type!== ""&&form.passing!==""&&form.passing!=="")
+        && form.type!== ""&&form.passing!=="")
         {
         let paylaod = [
             ...data,
@@ -30,21 +32,22 @@ const Education = () => {
             }
         ]
         setData(paylaod)
+        setFlag(prev=>!prev)
     }
     else {
         alert("Enter all data");
       }
     }
-    return (
+    return !flag?(
         <>
         <SigninNavbar/>
         <div className={styles.outer}>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Education :</div>
                 <select className={styles.margin} onChange={handleChange} name="education">
-                    <option value="PG">Post Graduation</option>
-                    <option value="G">Graduation</option>
-                    <option value="LESS10">less than 10th</option>
+                    <option value="Post Graduation">Post Graduation</option>
+                    <option value="Graduation">Graduation</option>
+                    <option value="less than 10th">less than 10th</option>
                     <option value="12TH">12th</option>
                     <option value="10TH">10th</option>
                 </select>
@@ -52,7 +55,7 @@ const Education = () => {
             <div className={styles.flex}>
                 <div className={styles.margin1}>Course :</div>
                 <select className={styles.margin} onChange={handleChange} name="course">
-                    <option value="CS">ENGINEERING</option>
+                    <option value="ENGINEERING">ENGINEERING</option>
                     <option value="BSC">BSC</option>
                     <option value="BCOM">BCOM</option>
                 </select>
@@ -60,39 +63,40 @@ const Education = () => {
             <div className={styles.flex}>
                 <div className={styles.margin1}>Specilization :</div>
                 <select className={styles.margin} onChange={handleChange} name="specilization">
-                    <option value="CS">COMPUTER ENGINEERING</option>
-                    <option value="EE">ELECTRONICE ENGINEERING</option>
-                    <option value="ME">MECHANICAL ENGINEERING</option>
-                    <option value="CV">CIVIL ENGINEERING</option>
-                    <option value="CE">CHEMICAL EMGINEERING</option>
+                    <option value="COMPUTER ENGINEERING">COMPUTER ENGINEERING</option>
+                    <option value="ELECTRONICE ENGINEERING">ELECTRONICE ENGINEERING</option>
+                    <option value="MECHANICAL ENGINEERING">MECHANICAL ENGINEERING</option>
+                    <option value="CIVIL ENGINEERING">CIVIL ENGINEERING</option>
+                    <option value="CHEMICAL EMGINEERING">CHEMICAL EMGINEERING</option>
                 </select>
             </div>
             <div className={styles.flex}>
-
-                <div className={styles.margin1}>univercity :</div>
-                <input className={styles.margin2} placeholder="univercity" name="univercity" value={form.univercity} onChange={handleChange} type="text" />
+                <div className={styles.margin1}>University :</div>
+                <input className={styles.margin2} placeholder="  university" name="univercity" value={form.univercity} onChange={handleChange} type="text" />
             </div>
             <div className={styles.flex}>
-                <div className={styles.margin1}>marks :</div>
-                <input className={styles.margin2} placeholder="marks" name="marks" value={form.marks} onChange={handleChange} type="number" />
+                <div className={styles.margin1}>Marks :</div>
+                <input className={styles.margin2} placeholder="  marks" name="marks" value={form.marks} onChange={handleChange} type="number" />
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Passing Year :</div>
-                <input className={styles.margin2} placeholder="passing year" name="passing" value={form.passing} onChange={handleChange} type="number" />
-
+                <input className={styles.margin2} placeholder="  passing year" name="passing" value={form.passing} onChange={handleChange} type="number" />
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Course Type :</div>
                 <select className={styles.margin} onChange={handleChange} name="type">
-                    <option value="full">Full Time</option>
-                    <option value="part">Part Time</option>
-                    <option value="D">Distance</option>
+                    <option value="Full Time">Full Time</option>
+                    <option value="Part Time">Part Time</option>
+                    <option value="Distance">Distance</option>
                 </select>
             </div>
             <button className={styles.btn} onClick={handleSubmit}>Register
      </button>
         </div>
         </>
+    ):
+    (
+        <Redirect to="/details"/>
     )
 }
 

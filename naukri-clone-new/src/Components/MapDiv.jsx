@@ -1,10 +1,14 @@
-import React from 'react'
+
+import React, { useContext, useEffect, useState } from 'react'
 import styled from "./MapDiv.module.css"
 import { useSelector } from 'react-redux'
+import { AuthContext } from './Register/AuthContextProvider'
+
 import {Link} from "react-router-dom"
 
+
 const MapDiv = () => {
-    const[count,setCount]=useState(0)
+ const {count,setCount} =useContext(AuthContext)
     const handleCount=()=>
     {
         setCount(count+1)

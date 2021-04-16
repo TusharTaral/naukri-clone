@@ -26,7 +26,7 @@ const obj={
 }
 export const AuthContext=createContext()
 const AuthContextProvider = ({children}) => {
-
+    const[count,setCount]=useState(0)
     const [isAuth,setIsAuth]=useState(false)
     const [data,setData]=useState([])
     const [form ,setForm]=useState(obj)
@@ -36,6 +36,7 @@ const AuthContextProvider = ({children}) => {
         form,
         setForm,
         data,setData,
+        count,setCount
     }
   return (
     <AuthContext.Provider value={value}>

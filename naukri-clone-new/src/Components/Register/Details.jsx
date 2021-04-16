@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import styles from "./Details.module.css"
 import { AuthContext } from './AuthContextProvider'
+import { Redirect } from 'react-router-dom'
 import SigninNavbar from "./SigninNavbar"
 const Details = () => {
     const { form, setForm, data, setData } = useContext(AuthContext)
@@ -35,6 +36,7 @@ const Details = () => {
                 }
             ]
             setData(paylaod)
+            setFlag(prev=>!prev)
         }
         else {
             alert("Enter all data");
@@ -85,8 +87,8 @@ const Details = () => {
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Category:</div>
-                <select onChange={handleChange} className={styles.margin} name="category">
-                    <option value="general">General</option>
+                <select onChange={handleChange}  name="category">
+                    <option value="General">General</option>
                     <option value="OBC">OBC</option>
                     <option value="SC">SC</option>
                     <option value="ST">ST</option>
@@ -118,6 +120,9 @@ const Details = () => {
             <button className={styles.btn} onClick={handleSubmit}>Register
      </button>
         </div>
+    ):
+    (
+        <Redirect to="/profile"/>
         </>
     )
 }
