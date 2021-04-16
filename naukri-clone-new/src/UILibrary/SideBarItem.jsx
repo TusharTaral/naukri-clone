@@ -8,6 +8,7 @@ const Div = styled.div`
    padding:0px 10px;
    padding-left:0px;
    width:max-content;
+   color:grey;
 `
 
 export const SideBarItem = ({label,children})=>{

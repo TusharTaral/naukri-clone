@@ -98,11 +98,12 @@
   .menu_seven > ul li:hover {
     border-bottom: 3px solid #2f82ab;
     transition: 0.5s;
+    cursor: pointer;
   }
   
   .menu_one {
     justify-content: space-around;
-   
+    
   }
   .menu_two > ul li {
     margin-left: 0px;
