@@ -7,6 +7,7 @@ import Login from "./Login"
 import PrivateRoute from "./PrivateRoute"
 import ForgotPassword from "./ForgotPassword"
 import UpdateProfile from "./UpdateProfile"
+import Home from "../Components/Home"
 
 function Routes() {
   return (
@@ -19,7 +20,7 @@ function Routes() {
           <AuthProvider>
             <Switch>
               <PrivateRoute exact path="/" >
-                <Dashboard />
+                <Home />
               </PrivateRoute>
               <PrivateRoute path="/update-profile"  >
                 <UpdateProfile />
