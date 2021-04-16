@@ -2,8 +2,8 @@
     height: 35px;
     width: 80%;
     border: none;
-    border-bottom: 1px solid rgb(218, 73, 97);
-    border-left: 1px solid rgb(218, 73, 97);
+    border-bottom: 1px solid rgb(31, 26, 41);
+    border-left: 1px solid rgb(34, 21, 34);
     font-size: 16px;
     outline: none;
     padding: 2px 20px;
@@ -25,8 +25,8 @@
 }
 
 .regi{
-    text-shadow: 2px 2px 4px #c51f7a;
-    color: rgb(214, 24, 129);
+    text-shadow: 1px 1px 2px #091e42;
+    color: #245b88;
     font-weight: 600;
 }
 .outer{
