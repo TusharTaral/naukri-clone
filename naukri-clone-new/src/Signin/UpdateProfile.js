@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import { useAuth } from "./contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import styles from "./UpdateProfile.module.css"
+import SigninNavbar from "./SigninNavbar"
 
 export default function UpdateProfile() {
   const emailRef = useRef()
@@ -43,13 +44,14 @@ export default function UpdateProfile() {
 
   return (
     <>
-      <div>
+    <SigninNavbar/>
+      <div className={styles.outer}>
         <div>
-          <h2 className="text-center mb-4">Update Profile</h2>
-          {error && <p variant="danger">{error}</p>}
+          <h2 className={styles.regi}>Update Profile</h2>
+          {error && <p className={styles.err}>{error}</p>}
           <form onSubmit={handleSubmit}>
             <div id="email">
-              <label>Email</label>
+           
               <input className={styles.names}
                 type="email"
                 ref={emailRef}
@@ -58,30 +60,31 @@ export default function UpdateProfile() {
               />
             </div>
             <div id="password">
-              <label>Password</label>
+            
               <input className={styles.names}
                 type="password"
                 ref={passwordRef}
-                placeholder="Leave blank to keep the same"
+                placeholder="pasword"
               />
             </div>
             <div id="password-confirm">
-              <label>Password Confirmation</label>
+              
               <input className={styles.names}
                 type="password"
                 ref={passwordConfirmRef}
-                placeholder="Leave blank to keep the same"
+                placeholder="  Confirm  Password"
               />
             </div>
-            <button disabled={loading} className="w-100" type="submit">
+            <button disabled={loading} className={styles.btn}type="submit">
               Update
             </button>
           </form>
         </div>
+      
+      <div className={styles.acc}>
+        <Link to="/"><h4 className={styles.link}> Cancel</h4></Link>
       </div>
-      <div className="w-100 text-center mt-2">
-        <Link to="/">Cancel</Link>
-      </div>
+    </div>
     </>
   )
 }

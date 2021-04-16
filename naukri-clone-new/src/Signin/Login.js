@@ -3,6 +3,7 @@ import React, { useRef, useState } from "react"
 import { useAuth } from "./contexts/AuthContext"
 import { Link, useHistory } from "react-router-dom"
 import styles from "./Login.module.css"
+import SigninNavbar from "./SigninNavbar"
 
 export default function Login() {
   const emailRef = useRef()
@@ -27,12 +28,13 @@ export default function Login() {
     setLoading(false)
   }
 
-  return (
+  return (<>
+  <SigninNavbar/>
     <div className={styles.outer}>
       
         <div>
           <h1 className={styles.regi}>Log In</h1>
-          {error && <p variant="danger">{error}</p>}
+          {error && <p className={styles.err}>{error}</p>}
           <form onSubmit={handleSubmit}>
             <div className={styles.outerName} id="email">
              
@@ -47,13 +49,14 @@ export default function Login() {
             </button>
           </form>
           <div lassName={styles.acc} >
-            <Link to="/forgot-password">Forgot Password?</Link>
+            <Link to="/forgot-password"><h4 className={styles.link} >Forgot Password?</h4></Link>
           </div>
         </div>
     
       <h4 lassName={styles.acc} >
-        Need an account? <Link to="/signup">Sign Up</Link>
+        Need an account? <Link  to="/signup"><h4 className={styles.link} >Sign Up</h4></Link>
       </h4>
     </div>
+    </>
   )
 }
