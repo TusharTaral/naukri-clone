@@ -133,7 +133,7 @@ export  const SpringCog = () => {
             <img  className={styles.compName2} src={img2[9][state2]}></img>
             <img  className={styles.compName2} src={img2[10][state]}></img>
             <img  className={styles.compName2} src={img2[11][state2]}></img>
-            {/* <img  className={styles.compName2} src={img2[12][state]}></img> */}
+            
          </div>
                 <CenterPagination/>
            

@@ -1,17 +1,21 @@
 
-import Routes from "./Signin/Routes"
-import Home from './Components/Home';
-import { Navbar } from "./Components/Navbar"
-import { Route, Switch } from 'react-router-dom'
-import { SearchResultPage } from './Components/SearchResultPage';
-import SigninNavbar from "./Signin/SigninNavbar";
-import Login from "./Signin/Login";
+// import Routes from "./Signin/Routes"
+// import Home from './Components/Home';
+// import { Navbar } from "./Components/Navbar"
+// import { Route, Switch } from 'react-router-dom'
+// import { SearchResultPage } from './Components/SearchResultPage';
+// import SigninNavbar from "./Signin/SigninNavbar";
+// import Login from "./Signin/Login";
+import Education from "./Components/Register/Education";
+import Personal from "./Components/Register/Personal";
+
+
 
 function App() {
   return (
     <div>
       {/* <Navbar /> */}
-      <Switch>
+      {/* <Switch>
         <Route exact path='/'>
           <Home />
         </Route>
@@ -21,9 +25,13 @@ function App() {
         <Route path='/login'>
           <Routes />
         </Route>
-      </Switch>
+      </Switch> */}
       {/* <Routes/> */}
       {/* <SigninNavbar/> */}
+      {/* <Routes /> */}
+      {/* <Personal/> */}
+      {/* <Education/> */}
+      <Personal/>
     </div>
   );
 }
