@@ -1,17 +1,14 @@
-import React from "react";
-import styles from "./Navbar.module.css"
-import { Link } from "react-router-dom"
+import React from 'react'
+import { Redirect } from 'react-router-dom'
+import styles from "./ProfileNav.module.css"
+import {Link} from "react-router-dom"
+const ProfileNav = () => {
 
-export function Navbar() {
-
-
-    return (
-        <>
-            <div className={styles.background}
-                style={{ backgroundImage: `url("https://static.naukimg.com/s/7/109/assets/images/homepagebgImage.d92f90dc.webp")` }}>
-                <header className={styles.header}>
+  return (
+    <div>
+                      <header className={styles.header}>
                     <ul className={styles.navbar} >
-                        <div className={styles.image}>
+                        <div   className={styles.image}>
                             <img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="logo" />
                         </div>
                         <li className={styles.drop_one}>
@@ -164,6 +161,7 @@ export function Navbar() {
                             </div>
                         </li>
                         <li><Link to="/login"><span>LOGIN</span></Link></li>
+                        <li><Link to="/personal"><span>Details</span></Link></li>
                         <li style={{ marginLeft: 100 }} className={styles.drop_seven}>
                             <span ><img style={{ borderRadius: 15 }} src="https://tse1.mm.bing.net/th?id=OIP.NQEEBmeQTCRCgi8AU_n2zQAAAA&pid=Api&P=0&w=30&h=30" alt="Icon" /></span>
                             <div className={styles.menu_experiment}>
@@ -187,8 +185,8 @@ export function Navbar() {
                         </li>
                     </ul>
                 </header>
-            </div>
-        </>
-    )
-
+    </div>
+  )
 }
+
+export default ProfileNav

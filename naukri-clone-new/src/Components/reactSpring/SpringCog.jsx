@@ -3,6 +3,7 @@ import { CenterPagination } from "../CenterPagination";
 import styles from "./SpringCog.module.css"
 
 
+
 export const SpringCog = () => {
   const img = [
     ["https://logos-download.com/wp-content/uploads/2019/01/Cognizant_Technology_Solutions_Corp_Logo.png",
@@ -141,6 +142,67 @@ export const SpringCog = () => {
       </div>
 
 
+
+      <div  className={styles.hiring}>
+            <img  className={styles.compName}  src={img[0][state2]}></img>
+            <img  className={styles.compName} src={img[1][state]}></img>
+            <img  className={styles.compName} src={img[2][state2]}></img>
+            <img  className={styles.compName} src={img[3][state]}></img>
+            <img  className={styles.compName} src={img[4][state2]}></img>
+            <img  className={styles.compName} src={img[5][state]}></img>
+         </div>
+         <div style={{display:"flex"}}>
+         <div className={styles.hiring2}>
+            <img  className={styles.compName2}  src={img2[0][state2]}></img>
+            <img  className={styles.compName2} src={img2[1][state]}></img>
+            <img  className={styles.compName2} src={img2[2][state2]}></img>
+            <img  className={styles.compName2} src={img2[3][state]}></img>
+            <img  className={styles.compName2} src={img2[4][state2]}></img>
+            <img  className={styles.compName2} src={img2[5][state]}></img>
+            <img  className={styles.compName} src={img[4][state2]}></img>
+            <img  className={styles.compName} src={img[2][state]}></img>
+            <img  className={styles.compName2} src={img2[6][state2]}></img>
+            <img  className={styles.compName2} src={img2[7][state]}></img>
+            <img  className={styles.compName2} src={img2[8][state2]}></img>
+            <img  className={styles.compName2} src={img2[9][state2]}></img>
+            <img  className={styles.compName2} src={img2[10][state]}></img>
+            <img  className={styles.compName2} src={img2[11][state2]}></img>
+            <img  className={styles.compName2}  src={img2[0][state2]}></img>
+            <img  className={styles.compName2} src={img2[1][state]}></img>
+            <img  className={styles.compName2} src={img2[2][state2]}></img>
+            <img  className={styles.compName2} src={img2[3][state]}></img>
+            <img  className={styles.compName2} src={img2[4][state2]}></img>
+            <img  className={styles.compName2} src={img2[5][state]}></img>
+            <img  className={styles.compName} src={img[4][state2]}></img>
+            <img  className={styles.compName} src={img[2][state]}></img>
+            <img  className={styles.compName2} src={img2[6][state2]}></img>
+            <img  className={styles.compName2} src={img2[7][state]}></img>
+            <img  className={styles.compName2} src={img2[8][state2]}></img>
+            <img  className={styles.compName2} src={img2[9][state2]}></img>
+            <img  className={styles.compName2} src={img2[10][state]}></img>
+            <img  className={styles.compName2} src={img2[11][state2]}></img>
+            <img  className={styles.compName2}  src={img2[0][state2]}></img>
+            <img  className={styles.compName2} src={img2[1][state]}></img>
+            <img  className={styles.compName2} src={img2[2][state2]}></img>
+            <img  className={styles.compName2} src={img2[3][state]}></img>
+            <img  className={styles.compName2} src={img2[4][state2]}></img>
+            <img  className={styles.compName2} src={img2[5][state]}></img>
+            <img  className={styles.compName} src={img[4][state2]}></img>
+            <img  className={styles.compName} src={img[2][state]}></img>
+            <img  className={styles.compName2} src={img2[6][state2]}></img>
+            <img  className={styles.compName2} src={img2[7][state]}></img>
+            <img  className={styles.compName2} src={img2[8][state2]}></img>
+            <img  className={styles.compName2} src={img2[9][state2]}></img>
+            <img  className={styles.compName2} src={img2[10][state]}></img>
+            <img  className={styles.compName2} src={img2[11][state2]}></img>
+            
+         </div>
+                <CenterPagination/>
+           
+   
+         </div>
+         
+ 
     </div>
   );
 };

@@ -1,10 +1,24 @@
-import React, { useEffect, useState } from 'react'
+
+import React, { useContext, useEffect, useState } from 'react'
 import styled from "./MapDiv.module.css"
 import { useSelector } from 'react-redux'
+
 import { SkeletonMapDiv } from '../Skeleton/SkeletonMapDiv'
 
 const MapDiv = () => {
     const loading = useSelector(state => state.job.isLoading)
+import { AuthContext } from './Register/AuthContextProvider'
+
+import {Link} from "react-router-dom"
+
+
+const MapDiv = () => {
+ const {count,setCount} =useContext(AuthContext)
+    const handleCount=()=>
+    {
+        setCount(count+1)
+    }
+
     const data = useSelector(state => state.job.jobs)
 
     if (data.length === 0 && !loading) {
@@ -21,13 +35,17 @@ const MapDiv = () => {
         <div className={styled.container}>
             {
                 data && data.map(el => (
+
                     <div className={styled.box} key={el.id}>
+                   <Link  to ={`/search/${el.skill}/${el.id}`} push >
+                    <div className={styled.box}>
+
                         <h2 className={styled.companyName}>{el.companyName}</h2>
                         <div className={styled.ratingDiv}>
                             <h5 className={styled.skill} >{el.skill}</h5>
                             <div className={styled.ratingDivTwo}>
                                 <div><h5 className={styled.skill, styled.rating}>{el.rating}</h5></div>
-                                <div> <img className={styled.img} src="https://img.icons8.com/emoji/48/000000/star-emoji.png" /></div>
+                                <div> <img className={styled.img} src="https://img.icons8.com/emoji/48/000000/star-emoji.png" alt ="star"/></div>
                             </div>
                         </div>
 
@@ -80,11 +98,11 @@ const MapDiv = () => {
                                 <div>
                                     <img className={styled.img} src="https://img.icons8.com/metro/50/000000/star.png" alt="" />
                                 </div>
-                                <div className={styled.subs}>save</div>
+                                <div onClick={handleCount} className={styled.subs}>save</div>
                             </div>
                         </div>
                     </div>
-
+                    </Link>
                 ))
             }
         </div>
