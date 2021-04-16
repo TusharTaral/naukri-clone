@@ -3,6 +3,7 @@ import styles from "./Register.module.css"
 import { AuthContext } from './AuthContextProvider'
 const Details = () => {
     const { form, setForm, data, setData } = useContext(AuthContext)
+    const [flag,setFlag]=useState(false)
     const handleChange = (e) => {
         const { name, value } = e.target
         let paylaod = {
@@ -19,6 +20,7 @@ const Details = () => {
             let paylaod = [
                 ...data,
                 {
+                    image:form.image,
                     birth: form.birth,
                     gender: form.gender,
                     permanant: form.permanant,
@@ -39,6 +41,10 @@ const Details = () => {
     }
     return (
         <div>
+             <div className={styles.flex}>
+                <div className={styles.margin1}>Profile img :</div>
+                <input className={styles.margin} placeholder="image" name="image" value={form.image} onChange={handleChange} type="text" />
+            </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Birth Date :</div>
                 <input className={styles.margin} placeholder="Date of Birth" name="birth" value={form.birth} onChange={handleChange} type="date" />

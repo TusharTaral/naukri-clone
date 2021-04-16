@@ -10,10 +10,7 @@ function App() {
   return (
     <div>
       {/* <Routes /> */}
-      {/* <Personal/> */}
-      {/* <Education/> */}
-      <Skills/>
-      {/* <Details/> */}
+ 
     </div>
   );
 }

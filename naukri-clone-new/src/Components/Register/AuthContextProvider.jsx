@@ -21,7 +21,8 @@ const obj={
    able:"",
    usa:"",
    passport:"",
-   key:""
+   key:"",
+   image:""
 }
 export const AuthContext=createContext()
 const AuthContextProvider = ({children}) => {
