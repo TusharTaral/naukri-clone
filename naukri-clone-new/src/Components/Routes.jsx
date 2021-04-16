@@ -16,16 +16,17 @@ export const Routes = () => {
                 <Route exact path='/'>
                     <Home />
                 </Route>
-                <Route exact path='/search/:job'>
-                    <SearchResultPage />
-                </Route>
 
-                <Route path='/search/:job/:id'>
+                {/* <Route exact path='/search/:job'>
+                    <SearchResultPage />
+                </Route> */}
+
+                {/* <Route exact path='/search/:job/:id'>
                     <JobDescription />
-                </Route>
+                </Route> */}
+
                 <Route exact path='/login'>
                     <Login />
-
                 </Route>
             </Switch>
         </div>

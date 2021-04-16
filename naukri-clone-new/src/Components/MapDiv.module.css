@@ -55,6 +55,7 @@
     color: #536777;
     margin-top: 7px;
     margin-right: 10px;
+    cursor: pointer;
 }
 
 .box:hover{

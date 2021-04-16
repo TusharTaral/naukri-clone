@@ -1,12 +1,12 @@
 import React from 'react'
-import './JobList.css'
+import styles from './JobList.modules.css'
 import { useSelector } from 'react-redux'
 
 export const JobList = () => {
     const jobs = useSelector(state => state.job.jobs)
 
     return (
-        <div className='container'>
+        <div className={styles.container}>
             {
                 jobs.map((el) => {
                     return (

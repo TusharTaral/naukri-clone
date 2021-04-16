@@ -1,5 +1,5 @@
 import React from 'react'
-import './skeleton.css'
+import styled from './skeleton.css'
 
 export const SkeletonElement = ({ type }) => {
     const classes = `skeleton ${type}`

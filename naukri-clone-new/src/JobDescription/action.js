@@ -22,7 +22,7 @@ export const getJobFailureById = (payload) => {
 }
 
 
-export const getJobById =(id) => (dispatch)=>{
+export const getJobById = (id) => (dispatch) => {
     dispatch(getJobRequestById());
     return axios.get(`https://json-server-vedanshw.herokuapp.com/naukri/${id}`
     )
