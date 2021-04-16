@@ -3,6 +3,9 @@ import FirstDiv from './FirstDiv'
 import { Navbar } from "./Navbar"
 import styled from "./Home.module.css"
 import { SpringCog } from './reactSpring/SpringCog'
+
+
+
 import SideDiv1 from "./SideDiv1"
 import SideDiv2 from "./SideDiv2"
 import SideDiv3 from "./SideDive3"
@@ -13,11 +16,13 @@ import SideDiv6 from './SideDiv6'
 import SideDiv7 from './SideDiv7'
 import SideDiv8 from './SideDiv8'
 import SideDiv9 from './SideDiv9'
+
 const Home = () => {
   return (
     <div>
-      <Navbar className={styled.display} />
+  
       <FirstDiv className={styled.display1}></FirstDiv>
+
       <div style={{ display: "flex" }}>
         <div>
           <SpringCog />
@@ -36,6 +41,7 @@ const Home = () => {
 
       </div>
       <Footer />
+
     </div>
   )
 }
