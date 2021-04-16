@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { CenterPagination } from "../CenterPagination";
 import styles from "./SpringCog.module.css"
-//import { CenterPagination2 } from "../CenterPagination2";
+
 
 export  const SpringCog = () => {
   const   img=[ 

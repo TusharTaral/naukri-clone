@@ -1,0 +1,8 @@
+*Button*
+=> primary gives sky blue button 
+=> secondary gives you red button.
+=> Tertiary gives you yellow button.
+=> default width is 200px and can be set by passing as props. 
+=> Syntax for this is   <Button type ="secondary" input="hello world" width="100px" />
+
+*SideBar*
