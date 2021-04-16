@@ -2,29 +2,30 @@ import React, { useContext } from 'react'
 import { AuthContext } from './AuthContextProvider'
 import styles from "./Register.module.css"
 const Education = () => {
-    const { form1, setForm1, data, setData} = useContext(AuthContext)
+    const { form, setForm, data, setData} = useContext(AuthContext)
     const handleChange = (e) => {
         const { name, value } = e.target
         let paylaod = {
-            ...form1,
+            ...form,
             [name]: value
         }
-        setForm1(paylaod)
+        setForm(paylaod)
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (form1.name !== "" && form1.email!== ""&&form1.mobile!==""&&form1.work!=="")
+        if (form.education !== "" && form.course!== ""&&form.specilization!==""&&form.univercity!==""
+        && form.type!== ""&&form.passing!==""&&form.passing!=="")
         {
         let paylaod = [
             ...data,
             {
-                education:form1.education,
-                course:form1.course,
-                specilization:form1.specilization,
-                univercity:form1.univercity,
-                type:form1.type,
-                passing:form1.passing,
-                marks:form1.marks
+                education:form.education,
+                course:form.course,
+                specilization:form.specilization,
+                univercity:form.univercity,
+                type:form.type,
+                passing:form.passing,
+                marks:form.marks
             }
         ]
         setData(paylaod)
@@ -65,15 +66,15 @@ const Education = () => {
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>univercity :</div>
-                <input className={styles.margin} placeholder="univercity" name="univercity" value={form1.univercity} onChange={handleChange} type="text" />
+                <input className={styles.margin} placeholder="univercity" name="univercity" value={form.univercity} onChange={handleChange} type="text" />
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>marks :</div>
-                <input className={styles.margin} placeholder="marks" name="marks" value={form1.marks} onChange={handleChange} type="number" />
+                <input className={styles.margin} placeholder="marks" name="marks" value={form.marks} onChange={handleChange} type="number" />
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Passing Year :</div>
-                <input className={styles.margin} placeholder="passing year" name="passing" value={form1.passing} onChange={handleChange} type="number" />
+                <input className={styles.margin} placeholder="passing year" name="passing" value={form.passing} onChange={handleChange} type="number" />
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>marks :</div>
