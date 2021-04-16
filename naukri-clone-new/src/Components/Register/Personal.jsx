@@ -37,6 +37,7 @@ const Personal = () => {
     return !flag? (
         <>
         <SigninNavbar/>
+        <div className={styles.outer1}>
         <div  className={styles.outer}>
             
             <div className={styles.flex}> 
@@ -57,6 +58,7 @@ const Personal = () => {
             </div>
             <button className={styles.btn} onClick={handleSubmit}>Register
      </button>
+        </div>
         </div>
         </>
     ):
