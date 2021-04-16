@@ -19,12 +19,12 @@ const FirstDiv = () => {
   const isSearch = useSelector(state => state.job.isSearch)
 
   const handleSearch = () => {
-      dispatch(getJobs(job, location));
-      setIsSearch(true)
+    dispatch(getJobs(job, location));
+    setIsSearch(true)
   }
 
   if (search) {
-      return <Redirect to={`/search/${job}`} push />
+    return <Redirect to={`/search/${job}`} push />
   }
   return (
     <div className={styled.FirstDiv}>
@@ -33,23 +33,23 @@ const FirstDiv = () => {
         <div style={{ display: "flex" }}>
           <div className={styled.search1}>
             <img style={{ width: "20px", height: "20px" }} src="https://image.flaticon.com/icons/png/128/622/622669.png" alt="icon search" />
-            <input style={{ width: "93%", height: "90%",border:"0px" }} value={job} onChange={(e) => setJob(e.target.value)} placeholder="skill" type="text" />
+            <input style={{ width: "93%", height: "90%", border: "0px" }} value={job} onChange={(e) => setJob(e.target.value)} placeholder="skill" type="text" />
           </div>
           <div className={styled.search2} >
-            <img style={{ width: "20px", height: "20px",margin:"1%"}} src="https://image.flaticon.com/icons/png/128/684/684809.png" alt="icon location" />
-            <input  style={{ width: "80%", height: "90%",border:"0px" }}  placeholder='location' value={location} onChange={(e) => setLocation(e.target.value)}   type="text" />
+            <img style={{ width: "20px", height: "20px", margin: "1%" }} src="https://image.flaticon.com/icons/png/128/684/684809.png" alt="icon location" />
+            <input style={{ width: "80%", height: "90%", border: "0px" }} placeholder='location' value={location} onChange={(e) => setLocation(e.target.value)} type="text" />
           </div>
           <button onClick={handleSearch} className={styled.btn}>Search</button>
         </div>
-       
+
       </div>
       <div className={styled.FirstDiv2}>
-        <h2 style={{textAlign:"center",marginTop:"-10px"}}>Get Personalised Jobs !!</h2>
-        <p style={{textAlign:"center",marginTop:"5px",marginLeft:"5px"}}>Tell us what kind of a job you are looking out for and stay updated with latest opportunities.</p>
-      <div style={{justifyContent:"center"}} className={styled.flex}>
-      <button className={styled.btn1}>Register</button>
-        <button className={styled.btn2}>Upload CV</button>
-      </div>
+        <h2 style={{ textAlign: "center", marginTop: "-10px" }}>Get Personalised Jobs !!</h2>
+        <p style={{ textAlign: "center", marginTop: "5px", marginLeft: "5px" }}>Tell us what kind of a job you are looking out for and stay updated with latest opportunities.</p>
+        <div style={{ justifyContent: "center" }} className={styled.flex}>
+          <button className={styled.btn1}>Register</button>
+          <button className={styled.btn2}>Upload CV</button>
+        </div>
       </div>
     </div>
   )

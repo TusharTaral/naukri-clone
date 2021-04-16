@@ -14,7 +14,7 @@
     padding:  24px 24px 16px;
     background-color: white;
     text-align: left;
-    box-shadow: 0 1px 2px 0 rgba(0,106,194,.2);
+    box-shadow: 0 1px 2px 0 rgba(0,106,194,0.2);
     display: inline-block;
     border-radius: 4px;
     font-family: Roboto,sans-serif;
