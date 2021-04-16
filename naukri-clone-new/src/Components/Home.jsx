@@ -16,7 +16,7 @@ import SideDiv9 from './SideDiv9'
 const Home = () => {
   return (
     <div>
-      <Navbar className={styled.display} />
+      {/* <Navbar className={styled.display} /> */}
       <FirstDiv className={styled.display1}></FirstDiv>
       <div style={{ display: "flex" }}>
         <div>
