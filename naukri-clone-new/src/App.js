@@ -30,8 +30,8 @@ function App() {
       {/* <SigninNavbar/> */}
       {/* <Routes /> */}
       {/* <Personal/> */}
-      {/* <Education/> */}
-      <Personal/>
+      <Education/>
+      {/* <Personal/> */}
     </div>
   );
 }
