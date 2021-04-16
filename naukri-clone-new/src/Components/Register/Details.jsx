@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
 import styles from "./Register.module.css"
 import { AuthContext } from './AuthContextProvider'
+import { Redirect } from 'react-router-dom'
 const Details = () => {
     const { form, setForm, data, setData } = useContext(AuthContext)
     const [flag,setFlag]=useState(false)
@@ -34,12 +35,13 @@ const Details = () => {
                 }
             ]
             setData(paylaod)
+            setFlag(prev=>!prev)
         }
         else {
             alert("Enter all data");
         }
     }
-    return (
+    return !flag?(
         <div>
              <div className={styles.flex}>
                 <div className={styles.margin1}>Profile img :</div>
@@ -82,7 +84,7 @@ const Details = () => {
             <div className={styles.flex}>
                 <div className={styles.margin1}>Category:</div>
                 <select onChange={handleChange}  name="category">
-                    <option value="general">General</option>
+                    <option value="General">General</option>
                     <option value="OBC">OBC</option>
                     <option value="SC">SC</option>
                     <option value="ST">ST</option>
@@ -118,6 +120,9 @@ const Details = () => {
             }} onClick={handleSubmit}>Register
      </button>
         </div>
+    ):
+    (
+        <Redirect to="/profile"/>
     )
 }
 

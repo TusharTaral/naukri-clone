@@ -1,25 +1,46 @@
 import React from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
+import ProfilePage from '../Profile/ProfilePage'
 import Details from './Details'
+import Education from './Education'
+import Personal from './Personal'
 
 const RoutesRegister = () => {
   return (
     <div>
-      <Link to="/details">
-        Details
+
+      <Link to="/">
+
       </Link>
-      <Link to="/personal">
-        Personal
-      </Link>
+      <Link to="/">
+
+</Link>
       <Link to="/education">
-        Education
+
       </Link>
+      <Link to="/details">
+ 
+ </Link>
       <Link to="/profile">
-        Profile
+
       </Link>
+
       <Switch>
+     
+        <Route exact path="/">
+          <Personal/>
+        </Route>   
+        <Route path="/personal">
+          <Personal/>
+        </Route>
+        <Route path="/education">
+          <Education/>
+        </Route>
         <Route path="/details">
           <Details/>
+        </Route>
+        <Route path="/profile">
+          <ProfilePage/>
         </Route>
 
       </Switch>

@@ -102,7 +102,7 @@ export const Register = () => {
      
       <div style={{textAlign:"center",marginLeft:"4%"}}>
       <div style={{display:"flex"}} >
-      <input style={{marginTop:"20px"}} type="checkbox"></input>
+      <input style={{marginTop:"5px"}} type="checkbox"></input>
         <p>I agree to the Terms and Conditions and Privacy Policy governing the use of Naukri.com</p>
       
       </div>

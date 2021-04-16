@@ -2,8 +2,8 @@
     height: 35px;
     width: 40%;
     border: none;
-    border-bottom: 1px solid rgb(218, 73, 97);
-    border-left: 1px solid rgb(218, 73, 97);
+    border-bottom: 1px solid rgb(31, 26, 41);
+    border-left: 1px solid rgb(34, 21, 34);
     font-size: 16px;
     outline: none;
     padding: 2px 20px;
@@ -14,7 +14,7 @@
    justify-content: space-between;
   
 }
-.btn{
+.btn{  
     height: 50px;
     width: 20%;
     background-color: rgb(22, 141, 238);
