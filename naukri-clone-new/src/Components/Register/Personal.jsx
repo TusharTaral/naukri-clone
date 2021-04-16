@@ -2,8 +2,10 @@ import React, { useContext, useState } from 'react'
 import styles from "./Register.module.css"
 import { AuthContext } from './AuthContextProvider'
 import  SigninNavbar from "./SigninNavbar"
+import { Redirect } from 'react-router-dom'
 const Personal = () => {
     const { form, setForm, data, setData} = useContext(AuthContext)
+    const [flag,setFlag]=useState(false)
     const handleChange = (e) => {
         const { name, value } = e.target
         let paylaod = {
@@ -26,12 +28,13 @@ const Personal = () => {
             }
         ]
         setData(paylaod)
+        setFlag(prev=>!prev)
     }
     else {
         alert("Enter all data");
       }
     }
-    return (
+    return !flag? (
         <>
         <SigninNavbar/>
         <div  className={styles.outer}>
@@ -56,6 +59,9 @@ const Personal = () => {
      </button>
         </div>
         </>
+    ):
+    (
+        <Redirect to="/education"/>
     )
 }
 

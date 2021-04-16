@@ -1,22 +1,49 @@
-import React from 'react'
+
+import React, { useContext, useEffect, useState } from 'react'
 import styled from "./MapDiv.module.css"
 import { useSelector } from 'react-redux'
-import {Link} from "react-router-dom"
+
+import { SkeletonMapDiv } from '../Skeleton/SkeletonMapDiv'
 
 const MapDiv = () => {
+    const loading = useSelector(state => state.job.isLoading)
+import { AuthContext } from './Register/AuthContextProvider'
+
+import {Link} from "react-router-dom"
+
+
+const MapDiv = () => {
+<<<<<<< HEAD
     const[count,setCount]=React.useState(0)
+=======
+ const {count,setCount} =useContext(AuthContext)
+>>>>>>> 99f3c8f727a391c04d4f6c4e9d6d750ae9280696
     const handleCount=()=>
     {
         setCount(count+1)
     }
+
     const data = useSelector(state => state.job.jobs)
 
-    return (
+    if (data.length === 0 && !loading) {
+        return (
+            <div className={styled.container}>
+                <div className={styled.box}>
+                    <h4 style={{ color: '#091e42', textAlign: 'center', fontSize: '22px' }}>No Such Jobs</h4>
+                </div>
+            </div>
+        )
+    }
+
+    return !loading ? (
         <div className={styled.container}>
             {
                 data && data.map(el => (
+
+                    <div className={styled.box} key={el.id}>
                    <Link  to ={`/search/${el.skill}/${el.id}`} push >
                     <div className={styled.box}>
+
                         <h2 className={styled.companyName}>{el.companyName}</h2>
                         <div className={styled.ratingDiv}>
                             <h5 className={styled.skill} >{el.skill}</h5>
@@ -82,9 +109,17 @@ const MapDiv = () => {
                     </Link>
                 ))
             }
-
         </div>
-    )
+    ) :
+        (
+            <div className={styled.container}>
+                <div className={styled.box}>
+                    {
+                        [1, 2, 3, 4, 5].map(el => <SkeletonMapDiv key={el} />)
+                    }
+                </div>
+            </div>
+        )
 }
 
 export default MapDiv

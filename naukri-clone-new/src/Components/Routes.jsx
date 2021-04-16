@@ -22,7 +22,7 @@ export const Routes = () => {
                 </Route>
                 <Route path='/search/:job/:id'>
                      <JobDescription/>
-                </Route>
+                       </Route>
                 <Route exact path='/login'>
                     <Login />
                 </Route>
