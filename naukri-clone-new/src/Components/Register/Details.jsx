@@ -1,6 +1,7 @@
 import React, { useContext, useState } from 'react'
-import styles from "./Register.module.css"
+import styles from "./Details.module.css"
 import { AuthContext } from './AuthContextProvider'
+import SigninNavbar from "./SigninNavbar"
 const Details = () => {
     const { form, setForm, data, setData } = useContext(AuthContext)
     const [flag,setFlag]=useState(false)
@@ -40,48 +41,51 @@ const Details = () => {
         }
     }
     return (
-        <div>
+        <>
+        <SigninNavbar/>
+
+        <div className={styles.outer}>
              <div className={styles.flex}>
                 <div className={styles.margin1}>Profile img :</div>
-                <input className={styles.margin} placeholder="image" name="image" value={form.image} onChange={handleChange} type="text" />
+                <input className={styles.margin2} placeholder="image" name="image" value={form.image} onChange={handleChange} type="text" />
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Birth Date :</div>
-                <input className={styles.margin} placeholder="Date of Birth" name="birth" value={form.birth} onChange={handleChange} type="date" />
+                <input className={styles.margin2} placeholder="Date of Birth" name="birth" value={form.birth} onChange={handleChange} type="date" />
             </div>
             <div  className={styles.flex}>
             <div className={styles.margin1}>Gender :</div>
-                <div>
-                <input onChange={handleChange} type="radio" id="male" name="gender" value="male" />
-                <label for="male">Male</label>
-                <input onChange={handleChange} type="radio" id="female" name="gender" value="female" />
-                <label for="female">Female</label>
-                <input onChange={handleChange} type="radio" id="other" name="gender" value="other" />
-                <label for="other">Other</label>
+                <div className={styles.radio}>
+                <input  onChange={handleChange}  type="radio" id="male" name="gender" value="male" />
+                <label className={styles.radio1} for="male">Male</label>
+                <input onChange={handleChange}  type="radio" id="female" name="gender" value="female" />
+                <label className={styles.radio1} for="female">Female</label>
+                <input onChange={handleChange}  type="radio" id="other" name="gender" value="other" />
+                <label for="other"> Other</label>
                 </div>
             </div>
             <div className={styles.flex}>
-                <div className={styles.margin1}>Permanant Address :</div>
-                <input className={styles.margin} placeholder="Permanant Address" name="permanant" value={form.permanant} onChange={handleChange} type="text" />
+                <div className={styles.margin1}> Address :</div>
+                <input className={styles.margin2} placeholder=" Address" name="permanant" value={form.permanant} onChange={handleChange} type="text" />
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Home-Town :</div>
-                <input className={styles.margin} placeholder="Home town" name="hometown" value={form.hometown} onChange={handleChange} type="text" />
+                <input className={styles.margin2} placeholder="Home town" name="hometown" value={form.hometown} onChange={handleChange} type="text" />
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Pin Code:</div>
-                <input className={styles.margin} placeholder="pincode" name="pincode" value={form.pincode} onChange={handleChange} type="number" />
+                <input className={styles.margin2} placeholder="pincode" name="pincode" value={form.pincode} onChange={handleChange} type="number" />
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Marital Status:</div>
-                <select onChange={handleChange} name="marital">
+                <select onChange={handleChange} className={styles.margin}name="marital">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Category:</div>
-                <select onChange={handleChange}  name="category">
+                <select onChange={handleChange} className={styles.margin} name="category">
                     <option value="general">General</option>
                     <option value="OBC">OBC</option>
                     <option value="SC">SC</option>
@@ -90,34 +94,31 @@ const Details = () => {
             </div>
             <div className={styles.flex}>
             <div className={styles.margin1}>Are you Differently Abled? :</div>
-                <div>
+                <div className={styles.radio}>
                 <input onChange={handleChange} type="radio" name="able" value="yes" />
-                <label for="yes">Yes</label>
+                <label className={styles.radio1} for="yes">Yes</label>
                 <input onChange={handleChange} type="radio"name="able" value="no" />
                 <label for="no">No</label>
                 </div>
             </div>
             <div className={styles.flex}>
-                <div className={styles.margin1}>Passport or Work Permit for Other Countries:</div>
-                <select onChange={handleChange}  name="passport">
+                <div className={styles.margin1}>Passport :</div>
+                <select onChange={handleChange} className={styles.margin}  name="passport">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
             </div>
             <div className={styles.flex}>
-                <div className={styles.margin1}>Work Permit for USA:</div>
-                <select onChange={handleChange}  name="usa">
+                <div className={styles.margin1}>Work Permit :</div>
+                <select onChange={handleChange} className={styles.margin}  name="usa">
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
             </div>
-            <button style={{
-                margin: "20px", backgroundColor: "slateblue",
-                width: "150px", height: "50px", borderRadius: "10px",
-                marginLeft: "700px"
-            }} onClick={handleSubmit}>Register
+            <button className={styles.btn} onClick={handleSubmit}>Register
      </button>
         </div>
+        </>
     )
 }
 
