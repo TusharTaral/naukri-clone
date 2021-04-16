@@ -8,7 +8,8 @@ import Personal from './Personal'
 const RoutesRegister = () => {
   return (
     <div>
-      <Link to="/personal"></Link>
+
+   
       <Link to="/education">
 
       </Link>

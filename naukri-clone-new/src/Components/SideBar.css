@@ -1,5 +1,5 @@
 .sidenav{
-  height: 350px; 
+  height: 550px; 
   width: 278px; 
   position: fixed;
   z-index: 1;
@@ -9,7 +9,8 @@
   overflow-x: hidden; 
   padding-top: 2%;
   padding-left: 10px;
-  /* border: 1px solid black */
+  border: 1px solid #ebf0f6;
+    box-shadow: 0 1px 2px 0 rgba(0,106,194,0.2);
 }
 
 .useEffect{
@@ -53,4 +54,13 @@
   width: 15px;
   height: 15px;
       color: #536777;
+}
+
+.filterDiv{
+  padding: 7px 0px ;
+}
+
+.slider:focus{
+  outline: none;
+  border: none;
 }

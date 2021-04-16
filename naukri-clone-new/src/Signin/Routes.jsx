@@ -40,9 +40,22 @@ function Routes() {
               <Route path="/signup" >
                 <Signup />
               </Route>
+              <PrivateRoute path="/personal" >
+                <Personal />
+              </PrivateRoute>
+              <PrivateRoute path="/education" >
+                <Education />
+              </PrivateRoute>
+              <PrivateRoute path="/details" >
+                <Details />
+              </PrivateRoute>
+              <PrivateRoute path="/profile" >
+                <ProfilePage />
+              </PrivateRoute>
               <Route path="/login"  >
                 <Login />
               </Route>
+             
               <Route path="/forgot-password" >
                 <ForgotPassword />
               </Route>

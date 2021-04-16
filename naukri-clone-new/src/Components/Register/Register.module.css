@@ -27,6 +27,7 @@
 .outer{
     margin-top: 3rem;
     text-align: center;
+    margin-left: 70%;
 }
 .btn{
     margin: 20px;
@@ -34,7 +35,7 @@
     width: 250px;
      height: 50px; 
      border-radius: 10px;
-    margin-left:130px;
+    margin-left:330px;
     font-size: 17px;
     border: none;
 }

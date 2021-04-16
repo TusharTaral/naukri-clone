@@ -1,9 +1,8 @@
 import React from 'react'
 import FirstDiv from './FirstDiv'
-import { Navbar } from "./Navbar"
 import styled from "./Home.module.css"
 import { SpringCog } from './reactSpring/SpringCog'
-
+import { Navbar } from "./Navbar"
 
 
 import SideDiv1 from "./SideDiv1"
@@ -20,7 +19,7 @@ import SideDiv9 from './SideDiv9'
 const Home = () => {
   return (
     <div>
-  <Navbar/>
+      <Navbar />
       <FirstDiv className={styled.display1}></FirstDiv>
 
       <div style={{ display: "flex" }}>

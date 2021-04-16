@@ -124,7 +124,7 @@ const Details = () => {
     ):
     (
         <Redirect to="/profile"/>
-     
+       
     )
 }
 

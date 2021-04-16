@@ -21,7 +21,7 @@ export default function Login() {
       setError("")
       setLoading(true)
       await login(emailRef.current.value, passwordRef.current.value)
-     // history.push("/")
+      history.push("/personal")
     } catch {
       setError("Failed to log in")
     }
@@ -32,7 +32,7 @@ export default function Login() {
   return !flag? (<>
   <SigninNavbar/>
     <div className={styles.outer}>
-      
+    
         <div>
           <h1 className={styles.regi}>Log In</h1>
           {error && <p className={styles.err}>{error}</p>}

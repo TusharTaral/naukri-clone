@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 const Div = styled.div`
-   padding: 1rem;
+   padding: .6rem;
    text-align:center;
    cursor:pointer;
    color:white;
