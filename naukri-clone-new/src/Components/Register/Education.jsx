@@ -70,15 +70,15 @@ const Education = () => {
             <div className={styles.flex}>
 
                 <div className={styles.margin1}>univercity :</div>
-                <input className={styles.margin} placeholder="univercity" name="univercity" value={form.univercity} onChange={handleChange} type="text" />
+                <input className={styles.margin2} placeholder="univercity" name="univercity" value={form.univercity} onChange={handleChange} type="text" />
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>marks :</div>
-                <input className={styles.margin} placeholder="marks" name="marks" value={form.marks} onChange={handleChange} type="number" />
+                <input className={styles.margin2} placeholder="marks" name="marks" value={form.marks} onChange={handleChange} type="number" />
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Passing Year :</div>
-                <input className={styles.margin} placeholder="passing year" name="passing" value={form.passing} onChange={handleChange} type="number" />
+                <input className={styles.margin2} placeholder="passing year" name="passing" value={form.passing} onChange={handleChange} type="number" />
 
             </div>
             <div className={styles.flex}>
