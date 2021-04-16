@@ -23,16 +23,16 @@ export default function Dashboard() {
     <>
       <div>
         <div>
-          <h2 className="text-center mb-4">Profile</h2>
+          <h2>Profile</h2>
           {error && <p >{error}</p>}
-          <strong>Email:</strong> {currentUser.email}
-          <Link to="/update-profile" className="btn btn-primary w-100 mt-3">
+          <strong>Email:</strong> 
+          <Link to="/update-profile" >
             Update Profile
           </Link>
         </div>
       </div>
-      <div className="w-100 text-center mt-2">
-        <button variant="link" onClick={handleLogout}>
+      <div >
+        <button onClick={handleLogout}>
           Log Out
         </button>
       </div>

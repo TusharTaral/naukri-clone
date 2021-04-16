@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react"
 import styles from "./ForgotPassword.module.css"
 import { useAuth } from "./contexts/AuthContext"
 import { Link } from "react-router-dom"
+import SigninNavbar from "./SigninNavbar"
 
 export default function ForgotPassword() {
   const emailRef = useRef()
@@ -18,7 +19,7 @@ export default function ForgotPassword() {
       setError("")
       setLoading(true)
       await resetPassword(emailRef.current.value)
-      setMessage("Check your inbox password reset link send to your register Email")
+      setMessage("Reset link send to your register Email address")
     } catch {
       setError("Failed to reset password")
     }
@@ -27,6 +28,8 @@ export default function ForgotPassword() {
   }
 
   return (
+    <>
+    <SigninNavbar/>
     <div className={styles.outer}>
      
         <div>
@@ -43,13 +46,14 @@ export default function ForgotPassword() {
             </button>
           </form>
           <div >
-            <Link to="/login">Login</Link>
+            <Link to="/login"><h4 className={styles.link} >Login</h4></Link>
           </div>
         </div>
       
       <div >
-        Need an account? <Link to="/signup">Sign Up</Link>
+        Need an account? <Link to="/signup"> <h4 className={styles.link} >Sign Up</h4></Link>
       </div>
     </div>
+    </>
   )
 }

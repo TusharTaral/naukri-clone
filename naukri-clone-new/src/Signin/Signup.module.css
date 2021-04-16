@@ -32,11 +32,30 @@
 .outer{
     text-align: center;  
      margin-left: 100%;
-     margin-top: 30%;
+     margin-top: 20%;
     width: 150%; 
     
 }
 .acc{
     font-size: 18px;    
     margin: 20px;
+}
+.link{
+    font-weight: 600;
+    color: #08477a;
+}
+.err{
+    background-color: #cfbbbd;
+    color: red;
+    margin: 5px 5rem;
+    padding: 2px;
+    height: 30px;
+  
+}
+.succ{
+    background-color: #a7b9bd;
+    margin: 5px 5rem;
+    padding: 2px;
+    height: 30px;
+    color: rgb(61, 61, 185);
 }
