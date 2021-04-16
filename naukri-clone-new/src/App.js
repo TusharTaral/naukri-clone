@@ -9,6 +9,8 @@ import Login from "./Signin/Login";
 import Education from "./Components/Register/Education";
 import Personal from "./Components/Register/Personal";
 import Details from "./Components/Register/Details"
+import { JobDescription } from "./JobDescription/JobDescription";
+
 
 function App() {
   return (
@@ -18,8 +20,11 @@ function App() {
         <Route exact path='/'>
           <Home />
         </Route>
-        <Route path='/search/:job'>
+        <Route exact path='/search/:job'>
           <SearchResultPage />
+        </Route>
+        <Route exact path='/search/:job/:id'>
+          <JobDescription />
         </Route>
         <Route path='/login'>
           <Routes />
@@ -29,7 +34,7 @@ function App() {
       {/* <SigninNavbar/> */}
       {/* <Routes /> */}
 
- 
+
 
       {/* <Personal/> */}
       {/* <Education/> */}
@@ -40,3 +45,5 @@ function App() {
 
 
 export default App;
+
+

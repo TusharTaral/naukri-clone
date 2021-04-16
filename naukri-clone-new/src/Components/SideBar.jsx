@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { getJobsByDate, getJobsByLocation, getJobsByRating } from '../redux/actions'
+import { getJobsByDate, getJobsByExp, getJobsByLocation, getJobsByRating } from '../redux/actions'
+import { SkeletonSideBar } from '../Skeleton/SkeletonSideBar'
+import { Slider } from '@material-ui/core'
 import './SideBar.css'
 
 export const SideBar = () => {
     const [show, handleShow] = useState(false);
+    const loading = useSelector(state => state.job.isLoading)
 
     const transitionNavBar = () => {
         if (window.scrollY > 170) {
@@ -23,13 +26,13 @@ export const SideBar = () => {
 
     const dispatch = useDispatch();
     const skill = useParams().job
-    var location = '';
+    const [location, setLocation] = useState('');
 
     const handleLocation = (e) => {
         const { name, checked } = e.target;
-
+        console.log(checked)
         if (checked) {
-            location = name
+            setLocation(name)
             dispatch(getJobsByLocation(skill, name))
         } else {
             let loc = ''
@@ -54,10 +57,25 @@ export const SideBar = () => {
         dispatch(getJobsByDate(skill, location, value))
     }
 
+    const [exp, setExp] = useState(0);
+    const handleExpChange = (e, value) => {
+        dispatch(getJobsByExp(skill, location, value))
+        setExp(value)
+    }
+
     return (
+
         <div className={`sidenav ${show && 'useEffect'}`} >
 
-            <div>
+            {   loading &&
+                [1, 2, 3].map(el => {
+                    return (
+                        <SkeletonSideBar key={el} />
+                    )
+                })
+            }
+
+            <div className='filterDiv'>
                 <h5 className='filterTitle'>Location</h5>
                 <div className='itemDiv'>
                     <div className='forMargin'></div>
@@ -66,7 +84,7 @@ export const SideBar = () => {
                         <p className='location'>Pune</p>
                     </div>
                     <div>
-                        <input type='checkbox' name='mumbai' onChange={handleLocation} className='checkbox' />
+                        <input type='checkbox' name='mumbai' onChange={handleLocation} />
                         <p className='location'>Mumbai/Bombay</p>
                     </div>
                     <div>
@@ -80,7 +98,25 @@ export const SideBar = () => {
                 </div>
             </div>
 
-            <div>
+            <div className='filterDiv'>
+                <h5 className='filterTitle'>Experience</h5>
+                <div className='itemDiv'>
+                    <div style={{ width: '70%', marginTop: '50px', marginLeft: '10px' }}>
+                        <Slider
+                            defaultValue={exp}
+                            aria-labelledby="discrete-slider"
+                            valueLabelDisplay="on"
+                            step={1}
+                            marks
+                            min={0}
+                            max={12}
+                            onChangeCommitted={handleExpChange}
+                        />
+                    </div>
+                </div>
+            </div>
+
+            <div className='filterDiv'>
                 <h5 className='filterTitle'>Ratings</h5>
                 <div className='itemDiv'>
                     <div className='forMargin'></div>
@@ -133,7 +169,6 @@ export const SideBar = () => {
                     <option value='DESC' >Oldest</option>
                 </select>
             </div>
-
-        </div >
+        </div>
     )
 }
