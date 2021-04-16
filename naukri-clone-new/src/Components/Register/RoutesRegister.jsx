@@ -8,35 +8,24 @@ import Personal from './Personal'
 const RoutesRegister = () => {
   return (
     <div>
-
-      <Link to="/">
-
-      </Link>
-      <Link to="/">
-
-</Link>
+      <Link to="/personal"></Link>
       <Link to="/education">
 
       </Link>
-      <Link to="/details">
- 
- </Link>
+      <Link to="/details"> </Link>
       <Link to="/profile">
 
       </Link>
 
       <Switch>
-     
-        <Route exact path="/">
-          <Personal/>
-        </Route>   
+    
         <Route path="/personal">
           <Personal/>
         </Route>
         <Route path="/education">
           <Education/>
         </Route>
-        <Route path="/details">
+        <Route exact path="/details">
           <Details/>
         </Route>
         <Route path="/profile">

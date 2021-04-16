@@ -14,7 +14,7 @@ function App() {
   return (
     <div>
       {/* <Navbar /> */}
-      <Switch>
+      {/* <Switch>
         <Route exact path='/'>
           <Home />
         </Route>
@@ -24,14 +24,14 @@ function App() {
         <Route path='/login'>
           <Routes />
         </Route>
-      </Switch>
+      </Switch> */}
       {/* <Routes/> */}
       {/* <SigninNavbar/> */}
       {/* <Routes /> */}
 
  
 
-      {/* <Personal/> */}
+      <Personal/>
       {/* <Education/> */}
       {/* <Details/> */}
     </div>
