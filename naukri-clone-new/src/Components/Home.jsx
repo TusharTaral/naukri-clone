@@ -1,6 +1,5 @@
 import React from 'react'
 import FirstDiv from './FirstDiv'
-import { Navbar } from "./Navbar"
 import styled from "./Home.module.css"
 import { SpringCog } from './reactSpring/SpringCog'
 
@@ -41,7 +40,7 @@ const Home = () => {
 
       </div>
       <Footer />
-
+        
     </div>
   )
 }
