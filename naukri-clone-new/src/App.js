@@ -5,11 +5,12 @@ import { Navbar } from "./Components/Navbar"
 import { Route, Switch } from 'react-router-dom'
 import { SearchResultPage } from './Components/SearchResultPage';
 import SigninNavbar from "./Signin/SigninNavbar";
+import Login from "./Signin/Login";
 
 function App() {
   return (
     <div>
-      {/* <Navbar />
+      {/* <Navbar /> */}
       <Switch>
         <Route exact path='/'>
           <Home />
@@ -17,8 +18,11 @@ function App() {
         <Route path='/search/:job'>
           <SearchResultPage />
         </Route>
-      </Switch> */}
-      <Routes/>
+        <Route path='/login'>
+          <Routes />
+        </Route>
+      </Switch>
+      {/* <Routes/> */}
       {/* <SigninNavbar/> */}
     </div>
   );

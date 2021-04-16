@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Navbar.module.css"
-
+import { Link } from "react-router-dom"
 
 export function Navbar() {
 
@@ -163,7 +163,7 @@ export function Navbar() {
                                 </div>
                             </div>
                         </li>
-                        <li><span>LOGIN</span></li>
+                        <li><Link to="/login"><span>LOGIN</span></Link></li>
                         <li style={{ marginLeft: 100 }} className={styles.drop_seven}>
                             <span ><img style={{ borderRadius: 15 }} src="https://tse1.mm.bing.net/th?id=OIP.NQEEBmeQTCRCgi8AU_n2zQAAAA&pid=Api&P=0&w=30&h=30" alt="Icon" /></span>
                             <div className={styles.menu_experiment}>
