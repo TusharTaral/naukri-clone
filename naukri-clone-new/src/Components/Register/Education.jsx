@@ -95,7 +95,7 @@ const Education = () => {
                     <option value="Distance">Distance</option>
                 </select>
             </div>
-            <div style={{display:"flex",width:'550px',marginLeft:"120px"}}>
+            <div style={{display:"flex",width:'550px',marginLeft:"36%"}}>
             <button className={styles.btn} onClick={handleSubmit}>Next
      </button>
     <Link to="/"> <button className={styles.btn} >Cancel

@@ -19,7 +19,7 @@ function Routes() {
     <div
   
     >
-      <div className="w-100" >
+      <div  >
       <Link to="/personal"></Link>
       <Link to="/education">
 

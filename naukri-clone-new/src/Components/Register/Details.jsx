@@ -121,7 +121,7 @@ const Details = () => {
                     <option value="no">No</option>
                 </select>
             </div>
-            <div style={{display:"flex",width:'550px',marginLeft:"140px"}}>
+            <div style={{display:"flex",width:'550px',marginLeft:"37%"}}>
             <button className={styles.btn} onClick={handleSubmit}>Next
      </button>
     <Link to="/"> <button className={styles.btn} >Cancel

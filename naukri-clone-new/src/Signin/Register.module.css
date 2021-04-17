@@ -1,5 +1,5 @@
 .names{
-    height: 35px;
+    height: 40px;
     width: 40%;
     border: none;
     border-bottom: 1px solid rgb(31, 26, 41);
@@ -24,10 +24,9 @@
    
 }
 .outer{
-   background-color: blanchedalmond;
-   width: 50%;
- 
-   margin-left: 24%;   
+    text-align: center;    
+    margin-top: 5%;
+     
 }
 .regi{
     text-shadow: 2px 2px 4px #c51f7a;
