@@ -10,12 +10,13 @@ import Education from "./Components/Register/Education";
 import Personal from "./Components/Register/Personal";
 import Details from "./Components/Register/Details"
 import { JobDescription } from "./JobDescription/JobDescription";
+import ProfilePage from "./Components/Profile/ProfilePage";
 
 
 function App() {
   return (
     <div>
-      {/* <Navbar /> */}
+  
       <Switch>
         <Route exact path='/'>
           <Home />
@@ -32,8 +33,7 @@ function App() {
 
       </Switch>
 
-
-    
+        
     </div>
   );
 }
