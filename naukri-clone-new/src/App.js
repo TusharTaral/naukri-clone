@@ -29,7 +29,7 @@ function App() {
         </Route>
         <Route path='/login'>
           <Routes />
-        </Route>
+        </Route> 
 
       </Switch>
 

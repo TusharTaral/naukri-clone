@@ -19,7 +19,7 @@ function Routes() {
    
       style={{ minHeight: "100vh" }}
     >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+      <div className="w-100" style={{ maxWidth: "100%" }}>
       <Link to="/personal"></Link>
       <Link to="/education">
 
