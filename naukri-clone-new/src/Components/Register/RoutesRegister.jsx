@@ -13,25 +13,20 @@ const RoutesRegister = () => {
       <Link to="/education">
 
       </Link>
-      <Link to="/details">
- 
- </Link>
+      <Link to="/details"> </Link>
       <Link to="/profile">
 
       </Link>
 
       <Switch>
-     
-        <Route exact path="/">
-          <Personal/>
-        </Route>   
+    
         <Route path="/personal">
           <Personal/>
         </Route>
         <Route path="/education">
           <Education/>
         </Route>
-        <Route path="/details">
+        <Route exact path="/details">
           <Details/>
         </Route>
         <Route path="/profile">

@@ -32,7 +32,7 @@ const Education = () => {
             }
         ]
         setData(paylaod)
-        setFlag(prev=>!prev)
+        setFlag(true)
     }
     else {
         alert("Enter all data");
