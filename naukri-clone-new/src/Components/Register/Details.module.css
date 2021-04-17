@@ -46,7 +46,7 @@
     width: 250px;
      height: 50px; 
      border-radius: 10px;
-    margin-left:260px;
+    /* margin-left:260px; */
     font-size: 17px;
     border: none;
 }
@@ -61,4 +61,12 @@
 }
 .radio1{
     margin: 1px 10px;
+}
+.regi{
+    text-shadow: 1px 1px 2px #091e42;
+    color: #245b88;
+    font-weight: 600;
+    width: 100%;
+    margin-left: 172%;
+   
 }

@@ -45,6 +45,7 @@ const FirstDiv = () => {
         </div>
 
       </div>
+      <div  className={styled.jobBox}>
       <div className={styled.FirstDiv2}>
         <h2 style={{ textAlign: "center", marginTop: "-10px" }}>Get Personalised Jobs !!</h2>
         <p style={{ textAlign: "center", marginTop: "5px", marginLeft: "5px" }}>Tell us what kind of a job you are looking out for and stay updated with latest opportunities.</p>
@@ -52,6 +53,7 @@ const FirstDiv = () => {
           <button className={styled.btn1}>Register</button>
           <button className={styled.btn2}>Upload CV</button>
         </div>
+      </div>
       </div>
     </div>
   )
