@@ -12,14 +12,14 @@ import Personal from "../Components/Register/Personal"
 import Education from "../Components/Register/Education"
 import Details from "../Components/Register/Details"
 import ProfilePage from "../Components/Profile/ProfilePage"
+import { SearchResultPage } from "../Components/SearchResultPage"
 
 function Routes() {
   return (
     <div
-   
-      style={{ minHeight: "100vh" }}
+  
     >
-      <div className="w-100" style={{ maxWidth: "400px" }}>
+      <div className="w-100" >
       <Link to="/personal"></Link>
       <Link to="/education">
 
@@ -31,10 +31,11 @@ function Routes() {
         <Router>
           <AuthProvider>
             <Switch>
-              <PrivateRoute exact path="/" >
+              <Route exact path="/" >
                 <Home />
-              </PrivateRoute>
-              <PrivateRoute path="/update-profile"  >
+              </Route>
+    
+              <PrivateRoute  path="/update-profile"  >
                 <UpdateProfile />
               </PrivateRoute>
               <Route path="/signup" >
@@ -59,7 +60,12 @@ function Routes() {
               <Route path="/forgot-password" >
                 <ForgotPassword />
               </Route>
-              <Route path="/personal" >
+  
+
+              <Route path="/profile">
+          <ProfilePage/>
+        </Route>
+        <Route path="/personal" >
                 <Personal />
               </Route>
               <Route path="/education">
@@ -68,8 +74,8 @@ function Routes() {
         <Route path="/details">
           <Details/>
         </Route>
-        <Route path="/profile">
-          <ProfilePage/>
+        <Route exact path='/search/:job'>
+          <SearchResultPage />
         </Route>
             </Switch>
           </AuthProvider>

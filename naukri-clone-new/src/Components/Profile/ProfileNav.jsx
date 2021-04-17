@@ -13,7 +13,7 @@ const ProfileNav = () => {
             <header className={styles.header}>
                 <ul className={styles.navbar} >
                     <div className={styles.image}>
-                        <img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="logo" />
+                     <Link to="/">  <img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="logo" /></Link> 
                     </div>
                     <li className={styles.drop_one}>
                         <span>JOBS</span>
