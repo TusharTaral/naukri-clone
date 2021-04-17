@@ -178,3 +178,39 @@ export const getJobsByExp = (job, location, num) => (dispatch) => {
             .catch(err => dispatch(getJobFailure()))
     }
 }
+
+//filter by salary
+
+export const getJobsBySalary = (job, num, location) => (dispatch) => {
+    var gte; var lte
+    if (num === 0) { gte = 5000; lte = 30000 }
+    else if (num === 3) { gte = 30000; lte = 60000 }
+    else if (num === 6) { gte = 60000; lte = 100000 }
+    else if (num === 10) { gte = 100000; lte = 150000 }
+
+    dispatch(getJobRequest())
+
+    if (location !== '') {
+        return axios.get('https://json-server-vedanshw.herokuapp.com/naukri', {
+            params: {
+                q: job,
+                salary_gte: gte,
+                salary_lte: lte,
+                location: location
+            }
+        })
+            .then(res => dispatch(getJobSuccess(res.data)))
+            .catch(err => dispatch(getJobFailure()))
+    }
+    else {
+        return axios.get('https://json-server-vedanshw.herokuapp.com/naukri', {
+            params: {
+                q: job,
+                salary_gte: gte,
+                salary_lte: lte
+            }
+        })
+            .then(res => dispatch(getJobSuccess(res.data)))
+            .catch(err => dispatch(getJobFailure()))
+    }
+}
