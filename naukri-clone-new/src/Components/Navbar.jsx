@@ -37,7 +37,7 @@ export function Navbar() {
                             </div>
                         </li>
                         <li className={styles.drop_two}>
-                            <span>RECRUITERS</span>
+                          <Link to="/recruiter">   <span>RECRUITERS</span></Link> 
                             <div className={styles.menu_experiment}>
                                 <div className={styles.menu_two}>
                                     <ul>

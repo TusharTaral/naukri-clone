@@ -11,7 +11,7 @@ import Personal from "./Components/Register/Personal";
 import Details from "./Components/Register/Details"
 import { JobDescription } from "./JobDescription/JobDescription";
 import ProfilePage from "./Components/Profile/ProfilePage";
-
+import {Recruiter} from "./Recruiter/Recruiter"
 
 function App() {
   return (
@@ -30,7 +30,9 @@ function App() {
         <Route path='/login'>
           <Routes />
         </Route> 
-
+        <Route path='/recruiter'>
+          <Recruiter/>
+        </Route> 
       </Switch>
       
 
