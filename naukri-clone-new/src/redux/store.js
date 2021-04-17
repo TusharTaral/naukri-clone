@@ -1,12 +1,13 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux'
 import { reducerJobDes } from '../JobDescription/reducerJobDes';
 import { jobReducer } from './jobReducer';
-
+import {recruiterReducer} from "../Recruiter/reducer"
 
 
 const rootReducer = combineReducers({
     job: jobReducer,
-    jobId:reducerJobDes
+    jobId:reducerJobDes,
+    recruiter:recruiterReducer
 })
 
 const customMiddleWare = (state) => (next) => (action) => {
