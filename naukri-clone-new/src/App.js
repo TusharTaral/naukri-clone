@@ -29,7 +29,7 @@ function App() {
         <Route path='/login'>
           <Routes />
         </Route>
-      </Switch>
+      </Switch> 
       {/* <Routes/> */}
       {/* <SigninNavbar/> */}
       {/* <Routes /> */}

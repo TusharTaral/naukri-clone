@@ -90,7 +90,7 @@ const Education = () => {
                     <option value="Distance">Distance</option>
                 </select>
             </div>
-            <button className={styles.btn} onClick={handleSubmit}>Register
+            <button className={styles.btn} onClick={handleSubmit}>Next
      </button>
         </div>
         </>

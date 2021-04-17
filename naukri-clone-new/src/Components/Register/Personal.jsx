@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react'
 import styles from "./Register.module.css"
 import { AuthContext } from './AuthContextProvider'
 import  SigninNavbar from "./SigninNavbar"
-import { Redirect } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 const Personal = () => {
     const { form, setForm, data, setData} = useContext(AuthContext)
     const [flag,setFlag]=useState(false)
@@ -34,12 +34,14 @@ const Personal = () => {
         alert("Enter all data");
       }
     }
+   
     return !flag? (
         <>
         <SigninNavbar/>
         <div className={styles.outer1}>
+        <h1 className={styles.regi}>Registration Form</h1>
         <div  className={styles.outer}>
-            
+        
             <div className={styles.flex}> 
                 <div className={styles.margin1}>Name :-</div>
                 <input className={styles.margin} placeholder="Full Name" name="name" value={form.name} onChange={handleChange} type="text" />
@@ -56,8 +58,12 @@ const Personal = () => {
                 <div className={styles.margin1}>Work Experiance :-</div>
                 <input className={styles.margin} placeholder="Work experiance" name="work" value={form.work} onChange={handleChange} type="number" />
             </div>
-            <button className={styles.btn} onClick={handleSubmit}>Register
+            <div style={{display:"flex",width:'550px',marginLeft:"160px"}}>
+            <button className={styles.btn} onClick={handleSubmit}>Next
      </button>
+    <Link to="/"> <button className={styles.btn} >Cancel
+     </button></Link>
+     </div>
         </div>
         </div>
         </>
