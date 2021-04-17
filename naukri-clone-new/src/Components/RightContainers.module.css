@@ -1,0 +1,36 @@
+.container{
+    margin-left: auto;
+    margin-right: 50px;
+    width: 20%;
+    margin-top: 30px;
+    background-color: white;
+    /* border: 1px solid black; */
+}
+
+.advImg{
+    width: 100%;
+}
+
+.companyContainer{
+    /* border: 1px solid red; */
+    margin-top: 10px;
+    padding: 5px 10px;
+}
+
+.adTitle{
+       color:#091e42;
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.adContainer{
+    margin-top: 15px;
+    padding-top: 5px;
+    /* border: 1px solid red; */
+}
+
+.individualAdCont{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}

@@ -7,11 +7,6 @@ const ProfileNav = () => {
 
     const { data } = useContext(AuthContext)
 
-    const handleRedirect = () => {
-        console.log('red')
-        return <Redirect to='/search/react-redux' push />
-
-    }
 
     return (
         <div>
@@ -25,9 +20,7 @@ const ProfileNav = () => {
                         <div className={styles.menu_experiment}>
                             <div className={styles.menu_one}>
                                 <ul>
-                                    <div onClick={handleRedirect}>
-                                        <li>Search jobs</li>
-                                    </div>
+                                    <li>Search jobs</li>
                                     <li>Advance searches</li>
                                     <li>Create free job alert</li>
                                     <li>Register now</li>
