@@ -16,7 +16,7 @@ function App() {
   return (
     <div>
       {/* <Navbar /> */}
-      <Switch>
+      {/* <Switch>
         <Route exact path='/'>
           <Home />
         </Route>
@@ -29,16 +29,11 @@ function App() {
         <Route path='/login'>
           <Routes />
         </Route>
-      </Switch> 
-      {/* <Routes/> */}
-      {/* <SigninNavbar/> */}
-      {/* <Routes /> */}
+
+      </Switch> */}
 
 
-
-      {/* <Personal/> */}
-      {/* <Education/> */}
-      {/* <Details/> */}
+    
     </div>
   );
 }
