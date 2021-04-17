@@ -16,7 +16,7 @@ function App() {
   return (
     <div>
       {/* <Navbar /> */}
-      {/* <Switch>
+      <Switch>
         <Route exact path='/'>
           <Home />
         </Route>
@@ -30,7 +30,7 @@ function App() {
           <Routes />
         </Route>
 
-      </Switch> */}
+      </Switch>
 
 
     
