@@ -27,7 +27,7 @@
 .outer{
     margin-top: 3rem;
     text-align: center;
-    margin-left: 70%;
+    margin-left: 95%;
 }
 .btn{
     margin: 20px;
@@ -35,10 +35,20 @@
     width: 250px;
      height: 50px; 
      border-radius: 10px;
-    margin-left:330px;
+    /* margin-left:330px; */
     font-size: 17px;
     border: none;
 }
 .btn:focus{
     outline: none;
 }
+
+.regi{
+    text-shadow: 1px 1px 2px #091e42;
+    color: #245b88;
+    font-weight: 600;
+    width: 100%;
+    margin-left: 172%;
+   
+}
+

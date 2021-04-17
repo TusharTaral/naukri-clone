@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Redirect } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { AuthContext } from './AuthContextProvider'
 import styles from "./Education.module.css"
 import SigninNavbar from './SigninNavbar'
@@ -90,8 +90,12 @@ const Education = () => {
                     <option value="Distance">Distance</option>
                 </select>
             </div>
-            <button className={styles.btn} onClick={handleSubmit}>Register
+            <div style={{display:"flex",width:'550px',marginLeft:"120px"}}>
+            <button className={styles.btn} onClick={handleSubmit}>Next
      </button>
+    <Link to="/"> <button className={styles.btn} >Cancel
+     </button></Link>
+     </div>
         </div>
         </>
     ):
