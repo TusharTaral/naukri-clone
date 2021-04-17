@@ -32,14 +32,14 @@ const FirstDiv = () => {
         <p >Find A Job at India's No.1 Job Site</p>
         <div style={{ display: "flex" }}>
           <div className={styled.search1}>
-            <img style={{ width: "20px", height: "20px" }} src="https://image.flaticon.com/icons/png/128/622/622669.png" alt="icon search" />
+            <img style={{ width: "20px", height: "20px",marginTop:'10px' }} src="https://image.flaticon.com/icons/png/128/622/622669.png" alt="icon search" />
 
             <input className={styled.searchJob} style={{ width: "93%", height: "90%", border: "0px" }} value={job} onChange={(e) => setJob(e.target.value)} placeholder="skill" type="text" />
 
           </div>
           <div className={styled.search2} >
-            <img style={{ width: "20px", height: "20px", margin: "1%" }} src="https://image.flaticon.com/icons/png/128/684/684809.png" alt="icon location" />
-            <input style={{ width: "80%", height: "90%", border: "0px" }} placeholder='location' value={location} onChange={(e) => setLocation(e.target.value)} type="text" />
+            <img style={{ width: "20px", height: "20px", marginTop: "10px" }} src="https://image.flaticon.com/icons/png/128/684/684809.png" alt="icon location" />
+            <input className={styled.searchJob} style={{ width: "50%", height: "90%", border: "0px" }} placeholder='location' value={location} onChange={(e) => setLocation(e.target.value)} type="text" />
           </div>
           <button onClick={handleSearch} className={styled.btn}>Search</button>
         </div>
