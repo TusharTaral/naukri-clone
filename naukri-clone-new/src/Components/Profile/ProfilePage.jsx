@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Redirect } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { getJobs } from '../../redux/actions'
 import Footer from '../Footer'
 import { Navbar } from "../Navbar"
@@ -17,9 +17,10 @@ const ProfilePage = () => {
     const dispatch = useDispatch()
     const [search, setIsSearch] = useState(false);
     const isSearch = useSelector(state => state.job.isSearch)
-
+    const location=""
     const handleSearch = () => {
-        dispatch(getJobs(job));
+     
+        dispatch(getJobs(job,location));
         setIsSearch(true)
     }
     if (search) {
@@ -35,9 +36,9 @@ const ProfilePage = () => {
                         <img style={{ width: "20px", height: "20px", marginTop: '17px' }} src="https://image.flaticon.com/icons/png/128/622/622669.png" alt="icon search" />
 
                         <input className={styled.searchJob} style={{ width: "93%", height: "90%", border: "0px" }} value={job} onChange={(e) => setJob(e.target.value)} placeholder="skill" type="text" />
-
-
                         <button onClick={handleSearch} className={styled.btn}>Search</button>
+
+                     {/* <Link to={`/search/${job}`}>  <button onClick={handleSearch} className={styled.btn}>Search</button></Link>  */}
                     </div>
                     <div style={{height:"80%"}}></div>
                     <div style={{display:"flex"}}>
