@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
+import Home from '../Home'
 import ProfilePage from '../Profile/ProfilePage'
 import Details from './Details'
 import Education from './Education'
@@ -13,25 +14,22 @@ const RoutesRegister = () => {
       <Link to="/education">
 
       </Link>
-      <Link to="/details">
- 
- </Link>
+      <Link to="/details"> </Link>
       <Link to="/profile">
 
       </Link>
 
       <Switch>
-     
-        <Route exact path="/">
-          <Personal/>
-        </Route>   
+         <Route path="/">
+           <Home/>
+         </Route>
         <Route path="/personal">
           <Personal/>
         </Route>
         <Route path="/education">
           <Education/>
         </Route>
-        <Route path="/details">
+        <Route exact path="/details">
           <Details/>
         </Route>
         <Route path="/profile">

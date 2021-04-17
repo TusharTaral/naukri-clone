@@ -1,11 +1,12 @@
 import React, { useRef, useState } from "react"
 
 import { useAuth } from "./contexts/AuthContext"
-import { Link, useHistory } from "react-router-dom"
+import { Link, Redirect, useHistory } from "react-router-dom"
 import styles from "./Login.module.css"
 import SigninNavbar from "./SigninNavbar"
 
 export default function Login() {
+  const [flag,setFlag]=useState(false)
   const emailRef = useRef()
   const passwordRef = useRef()
   const { login } = useAuth()
@@ -28,10 +29,10 @@ export default function Login() {
     setLoading(false)
   }
 
-  return (<>
+  return !flag? (<>
   <SigninNavbar/>
     <div className={styles.outer}>
-      
+    
         <div>
           <h1 className={styles.regi}>Log In</h1>
           {error && <p className={styles.err}>{error}</p>}
@@ -44,9 +45,8 @@ export default function Login() {
               
               <input className={styles.names}  placeholder="Password" type="password" ref={passwordRef} required />
             </div>
-            <button disabled={loading} className={styles.btn} type="submit">
-              Log In
-            </button>
+            <button disabled={loading} className={styles.btn} onClick={()=>setFlag(prev=>!prev)} type="submit">Log In </button>
+            <Link to ="/personal"/>
           </form>
           <div lassName={styles.acc} >
             <Link to="/forgot-password"><h4 className={styles.link} >Forgot Password?</h4></Link>
@@ -58,5 +58,8 @@ export default function Login() {
       </h4>
     </div>
     </>
+  ):
+  (
+    <Redirect to="/personal"/>
   )
 }
