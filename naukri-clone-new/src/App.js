@@ -16,7 +16,7 @@ import ProfilePage from "./Components/Profile/ProfilePage";
 function App() {
   return (
     <div>
-  
+
       <Switch>
         <Route exact path='/'>
           <Home />
@@ -34,8 +34,6 @@ function App() {
       </Switch>
       {/* <ProfilePage/> */}
 
-
-    
     </div>
   );
 }

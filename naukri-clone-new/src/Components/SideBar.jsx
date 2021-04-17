@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
-import { getJobsByDate, getJobsByExp, getJobsByLocation, getJobsByRating } from '../redux/actions'
+import { getJobsByDate, getJobsByExp, getJobsByLocation, getJobsByRating, getJobsBySalary } from '../redux/actions'
 import { SkeletonSideBar } from '../Skeleton/SkeletonSideBar'
 import { Slider } from '@material-ui/core'
 import './SideBar.css'
@@ -49,7 +49,6 @@ export const SideBar = () => {
         } else {
             dispatch(getJobsByLocation(skill, location))
         }
-
     }
 
     const handleDate = (e) => {
@@ -61,6 +60,16 @@ export const SideBar = () => {
     const handleExpChange = (e, value) => {
         dispatch(getJobsByExp(skill, location, value))
         setExp(value)
+    }
+
+    const handleSalary = (e) => {
+        const { name, checked } = e.target;
+        let num = Number(name);
+        if (checked) {
+            dispatch(getJobsBySalary(skill, num, location))
+        } else {
+            dispatch(getJobsBySalary(skill, location))
+        }
     }
 
     return (
@@ -144,19 +153,19 @@ export const SideBar = () => {
                 <div className='itemDiv'>
                     <div className='forMargin'></div>
                     <div>
-                        <input type='checkbox' name='0' onChange={handleRating} />
+                        <input type='checkbox' name='0' onChange={handleSalary} />
                         <p>0-3 Lakhs</p>
                     </div>
                     <div>
-                        <input type='checkbox' name='1' onChange={handleRating} />
+                        <input type='checkbox' name='3' onChange={handleSalary} />
                         <p>3-6 Lakhs</p>
                     </div>
                     <div>
-                        <input type='checkbox' name='2' onChange={handleRating} />
+                        <input type='checkbox' name='6' onChange={handleSalary} />
                         <p>6-10 Lakhs</p>
                     </div>
                     <div>
-                        <input type='checkbox' name='3' onChange={handleRating} />
+                        <input type='checkbox' name='10' onChange={handleSalary} />
                         <p>10-15 Lakhs</p>
                     </div>
                 </div>

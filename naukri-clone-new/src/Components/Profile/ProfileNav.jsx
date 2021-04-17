@@ -1,8 +1,12 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Redirect } from 'react-router-dom'
 import styles from "./ProfileNav.module.css"
 import { Link } from "react-router-dom"
+import { AuthContext } from '../Register/AuthContextProvider'
 const ProfileNav = () => {
+
+    const { data } = useContext(AuthContext)
+
 
     return (
         <div>
