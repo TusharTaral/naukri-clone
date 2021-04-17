@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Redirect } from 'react-router-dom'
 import styles from "./ProfileNav.module.css"
 import { Link } from "react-router-dom"
+import { AuthContext } from '../Register/AuthContextProvider'
 const ProfileNav = () => {
+
+    const { data } = useContext(AuthContext)
+
+    const handleRedirect = () => {
+        console.log('red')
+        return <Redirect to='/search/react-redux' push />
+
+    }
 
     return (
         <div>
@@ -16,7 +25,9 @@ const ProfileNav = () => {
                         <div className={styles.menu_experiment}>
                             <div className={styles.menu_one}>
                                 <ul>
-                                    <li>Search jobs</li>
+                                    <div onClick={handleRedirect}>
+                                        <li>Search jobs</li>
+                                    </div>
                                     <li>Advance searches</li>
                                     <li>Create free job alert</li>
                                     <li>Register now</li>
@@ -160,7 +171,7 @@ const ProfileNav = () => {
                             </div>
                         </div>
                     </li>
-                    <li><Link to="/login"><span>LOGIN</span></Link></li>
+                    <li><Link to="/login"><span> {data.length !== 0 ? data[0].name : 'LOGIN'}</span></Link></li>
                     <li><Link to="/personal"><span>Details</span></Link></li>
                     <li style={{ marginLeft: 100 }} className={styles.drop_seven}>
                         <span ><img style={{ borderRadius: 15 }} src="https://tse1.mm.bing.net/th?id=OIP.NQEEBmeQTCRCgi8AU_n2zQAAAA&pid=Api&P=0&w=30&h=30" alt="Icon" /></span>
