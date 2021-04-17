@@ -30,14 +30,12 @@ export const SideBar = () => {
 
     const handleLocation = (e) => {
         const { name, checked } = e.target;
-        console.log(checked)
         if (checked) {
             setLocation(name)
             dispatch(getJobsByLocation(skill, name))
         } else {
             let loc = ''
             dispatch(getJobsByLocation(skill, loc))
-            location = ''
         }
     }
 
