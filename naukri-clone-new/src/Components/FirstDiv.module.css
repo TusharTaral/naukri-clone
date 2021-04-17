@@ -44,6 +44,7 @@
         padding-left: 10px;
     }
     .FirstDiv2{
+       
         flex-basis: 40%;
         color: #091e42;
         font-family: Roboto;
@@ -52,6 +53,15 @@
         line-height: 20px;
         text-align: left;
         margin-top: 8px;
+    }
+    .jobBox{
+        box-shadow: 0 1px 20px 0 rgba(88, 81, 81, 0.2), 0 2px 20px 0 rgba(97, 88, 88, 0.19);
+       height: 9rem;
+       padding: 10px;
+       margin-left: 40px;
+       width: 35%;
+      
+    
     }
     .btn
     {

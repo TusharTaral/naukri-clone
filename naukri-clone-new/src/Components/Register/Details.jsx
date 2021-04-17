@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react'
 import styles from "./Details.module.css"
 import { AuthContext } from './AuthContextProvider'
-import { Redirect } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import SigninNavbar from "./SigninNavbar"
 const Details = () => {
     const { form, setForm, data, setData } = useContext(AuthContext)
@@ -87,7 +87,7 @@ const Details = () => {
             </div>
             <div className={styles.flex}>
                 <div className={styles.margin1}>Category:</div>
-                <select onChange={handleChange}  name="category">
+                <select onChange={handleChange} className={styles.margin}    name="category">
                     <option value="General">General</option>
                     <option value="OBC">OBC</option>
                     <option value="SC">SC</option>
@@ -117,8 +117,12 @@ const Details = () => {
                     <option value="no">No</option>
                 </select>
             </div>
-            <button className={styles.btn} onClick={handleSubmit}>Register
+            <div style={{display:"flex",width:'550px',marginLeft:"140px"}}>
+            <button className={styles.btn} onClick={handleSubmit}>Next
      </button>
+    <Link to="/"> <button className={styles.btn} >Cancel
+     </button></Link>
+     </div>
         </div>
         </>
     ):
