@@ -3,6 +3,7 @@
     /* margin-top: 2px; */
       margin-left: 490px; /* Same as the width of the sidebar */
      padding: 20px 10px;
+     position: absolute;
   /* border: 1px solid red; */
 }
 
