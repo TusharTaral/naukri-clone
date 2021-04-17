@@ -34,7 +34,10 @@ const Personal = () => {
         alert("Enter all data");
       }
     }
-   
+   const handleCancle=()=>
+   {
+      <Redirect to="/"/>
+   }
     return !flag? (
         <>
         <SigninNavbar/>
@@ -61,8 +64,8 @@ const Personal = () => {
             <div style={{display:"flex",width:'550px',marginLeft:"160px"}}>
             <button className={styles.btn} onClick={handleSubmit}>Next
      </button>
-    <Link to="/"> <button className={styles.btn} >Cancel
-     </button></Link>
+      <button onClick={handleCancle} className={styles.btn} >Cancel
+     </button> 
      </div>
         </div>
         </div>
