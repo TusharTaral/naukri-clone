@@ -1,15 +1,19 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Redirect } from 'react-router-dom'
 import styles from "./ProfileNav.module.css"
 import { Link } from "react-router-dom"
+import { AuthContext } from '../Register/AuthContextProvider'
 const ProfileNav = () => {
+
+    const { data } = useContext(AuthContext)
+
 
     return (
         <div>
             <header className={styles.header}>
                 <ul className={styles.navbar} >
                     <div className={styles.image}>
-                        <img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="logo" />
+                     <Link to="/">  <img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="logo" /></Link> 
                     </div>
                     <li className={styles.drop_one}>
                         <span>JOBS</span>

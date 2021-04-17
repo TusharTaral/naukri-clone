@@ -1,9 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
 import styles from "./Navbar.module.css"
 import { Link } from "react-router-dom"
-
+import { AuthContext } from './Register/AuthContextProvider'
 export function Navbar() {
-
+    const { data } = useContext(AuthContext)
 
     return (
         <>
@@ -163,7 +163,7 @@ export function Navbar() {
                                 </div>
                             </div>
                         </li>
-                        <li><Link to="/login"><span>LOGIN</span></Link></li>
+                        <li><span> {data.length !== 0 ? <Link to="/profile">{data[0].name} </Link>: <Link to="/login">LOGIN</Link>} </span></li>
                         <li style={{ marginLeft: 100 }} className={styles.drop_seven}>
                             <span ><img style={{ borderRadius: 15 }} src="https://tse1.mm.bing.net/th?id=OIP.NQEEBmeQTCRCgi8AU_n2zQAAAA&pid=Api&P=0&w=30&h=30" alt="Icon" /></span>
                             <div className={styles.menu_experiment}>

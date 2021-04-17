@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, Route, Switch } from 'react-router-dom'
 import Home from '../Home'
 import ProfilePage from '../Profile/ProfilePage'
+import { SearchResultPage } from '../SearchResultPage'
 import Details from './Details'
 import Education from './Education'
 import Personal from './Personal'
@@ -20,9 +21,9 @@ const RoutesRegister = () => {
       </Link>
 
       <Switch>
-         <Route path="/">
+         {/* <Route path="/">
            <Home/>
-         </Route>
+         </Route> */}
         <Route path="/personal">
           <Personal/>
         </Route>
@@ -35,7 +36,9 @@ const RoutesRegister = () => {
         <Route path="/profile">
           <ProfilePage/>
         </Route>
-
+        {/* <Route exact path='/search/:job'>
+          <SearchResultPage />
+        </Route> */}
       </Switch>
     </div>
   )
