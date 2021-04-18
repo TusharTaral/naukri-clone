@@ -2,9 +2,13 @@ import React, { useContext } from "react";
 import styles from "./Navbar.module.css"
 import { Link } from "react-router-dom"
 import { AuthContext } from './Register/AuthContextProvider'
+import { LoginModal } from "../LoginModal/LoginModal";
 export function Navbar() {
     const { data } = useContext(AuthContext)
-
+    const [showModal,setShowModal]= React.useState(false);
+    const openModal=()=>{
+        setShowModal(prev=>!prev)
+    }
     return (
         <>
             <div className={styles.background}
@@ -163,7 +167,9 @@ export function Navbar() {
                                 </div>
                             </div>
                         </li>
-                        <li><span> {data.length !== 0 ? <Link style={{ color: 'white' }} to="/profile">{data[0].name} </Link> : <Link style={{ color: 'white' }} to="/login">LOGIN</Link>} </span></li>
+                        {/* <li><span > {data.length !== 0 ? <Link style={{ color: 'white' }} to="/profile">{data[0].name} </Link> : <Link style={{ color: 'white' }} to="/login">LOGIN</Link>} </span></li> */}
+                        <li><span onClick={openModal}>Login</span></li>
+                        <LoginModal showModal={showModal} setShowModal={setShowModal}/>
                         <li style={{ marginLeft: 100 }} className={styles.drop_seven}>
                             {/* <span ><img style={{ borderRadius: 15 }} src="https://tse1.mm.bing.net/th?id=OIP.NQEEBmeQTCRCgi8AU_n2zQAAAA&pid=Api&P=0&w=30&h=30" alt="Icon" /></span> */}
                             <div className={styles.menu_experiment}>
