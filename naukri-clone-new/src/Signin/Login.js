@@ -29,7 +29,7 @@ export default function Login() {
     setLoading(false)
   }
 
-  return !flag? (<>
+  return   ( <>
   <SigninNavbar/>
     <div className={styles.outer}>
     
@@ -46,7 +46,7 @@ export default function Login() {
               <input className={styles.names}  placeholder="Password" type="password" ref={passwordRef} required />
             </div>
             <button disabled={loading} className={styles.btn} onClick={()=>setFlag(prev=>!prev)} type="submit">Log In </button>
-            <Link to ="/personal"/>
+           
           </form>
           <div lassName={styles.acc} >
             <Link to="/forgot-password"><h4 className={styles.link} >Forgot Password?</h4></Link>
@@ -58,8 +58,6 @@ export default function Login() {
       </h4>
     </div>
     </>
-  ):
-  (
-    <Redirect to="/personal"/>
   )
+  
 }

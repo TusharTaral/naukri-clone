@@ -29,7 +29,12 @@ export const Recruiter = () => {
         };
         setForm(payload);
     };
-
+    // const today = new Date();
+    // const year = today.getFullYear();
+    // const mes = today.getMonth()+1;
+    // const dia = today.getDate();
+    // const fecha =dia+"-"+mes+"-"+year;
+    // console.log(fecha)
     const handleRegister = () => {
         {
             let payload = {
@@ -39,7 +44,7 @@ export const Recruiter = () => {
                 salary: form.salary,
                 rating: Math.floor((Math.random() * 5) + 1) ,
                 reviews: Math.floor((Math.random() * 500) + 1),
-                date:form.date,
+                date:0,
                 location: form.location,
                 isSave: false,
                 description: form.description
@@ -47,11 +52,12 @@ export const Recruiter = () => {
             dispatch(registerUser(payload));
             setForm(initState);
         }
+        alert("job's successfully created")
     };
     return !isAuth ? (
         <div>
               <SigninNavbar/>
-            <h1 style={{marginBottom:"40px"}}  className={styles.regi}>Register Page for Recruiter</h1>
+            <h1 style={{marginBottom:"40px"}}  className={styles.regi}>Hire the Right Talent</h1>
             <div  className={styles.outer}>
             <div className={styles.margin}  className={styles.flex}>
                 <div className={styles.margin1}> Company Name :</div>
@@ -80,7 +86,7 @@ export const Recruiter = () => {
                  onChange={handleChange} 
                  type="text" />
             </div>
-            <div  className={styles.margin} className={styles.flex}>
+            {/* <div  className={styles.margin} className={styles.flex}>
                 <div className={styles.margin1}> Date to post a job :</div>
                 <input className={styles.margin2}
                  placeholder="date" 
@@ -88,7 +94,7 @@ export const Recruiter = () => {
                  value={form.date} 
                  onChange={handleChange} 
                  type="date" />
-            </div>
+            </div> */}
             <div className={styles.margin}  className={styles.flex}>
                 <div className={styles.margin1}> Experience :</div>
                 <input className={styles.margin2}

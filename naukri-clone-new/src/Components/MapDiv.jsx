@@ -84,7 +84,7 @@ const MapDiv = () => {
                             <div className={styled.flex} >
                                 {/* <div>{el.techStack[0]}</div> */}
                                 {/* {  (el.techStack.map(e=> (<div>{e}</div>)))} */}
-                                {/* {el.techStack.map(e => (<div style={{ marginTop: "-10px" }}>{e.techStack} <ul><li> {e.techStack} </li></ul></div>))} */}
+                                {/* {techStack.map(e => (<div style={{ marginTop: "-10px" }}>{e} <ul><li> {e} </li></ul></div>))} */}
                                 {/* {el.techStack.forEach(element =>  (<div>{element}hi</div>)
                                
                            )} */}
