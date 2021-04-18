@@ -7,7 +7,7 @@ const Div = styled.div`
    cursor:pointer;
    color:white;
    background:${(props)=>
-    props.color==="primary"?"#87CEEB":
+    props.color==="primary"?"#4a90e2":
     props.color === "secondary"?"red":
     props.color === "tertiary"?"yellow":"silver"};
     &:hover {

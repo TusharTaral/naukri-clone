@@ -12,7 +12,7 @@ export function Navbar() {
                 <header className={styles.header}>
                     <ul className={styles.navbar} >
                         <div className={styles.image}>
-                            <img src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="logo" />
+                           <Link to ="/"><img style={{marginTop:"20px"}} src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png" alt="logo" /></Link> 
                         </div>
                         <li className={styles.drop_one}>
                             <span>JOBS</span>
@@ -37,7 +37,7 @@ export function Navbar() {
                             </div>
                         </li>
                         <li className={styles.drop_two}>
-                            <span>RECRUITERS</span>
+                          <Link to="/recruiter">   <span>RECRUITERS</span></Link> 
                             <div className={styles.menu_experiment}>
                                 <div className={styles.menu_two}>
                                     <ul>

@@ -82,6 +82,8 @@
        padding: 10px;
        margin-left: 40px;
        width: 35%;
+       border: 1px solid rgb(221, 216, 216);
+
     }
     .btn
     {
