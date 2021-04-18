@@ -36,7 +36,7 @@ export const InterestedJob =()=>{
                              </SideBarItem>
                          </div>
                          <div className={styles.side}>
-                         <p>Posted: {`${item.date} day ago.`}</p>
+                         <p>Posted: {Number(`${item.date}`)>1?`${item.date} days ago`:`${item.date} day ago`}</p>
                          </div>
                          <div className={styles.line}></div>
                      </>)
