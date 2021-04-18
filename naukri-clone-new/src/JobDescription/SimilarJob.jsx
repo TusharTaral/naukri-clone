@@ -26,6 +26,7 @@ export const SimilarJob =()=>{
                   jobSug?.map(item=>{
                      return(<>
                         <h4 style={{marginTop:10}}>{item.companyName}</h4>
+                        <p>{item.skill}</p>
                          <p>{item.description}</p>
                          <div style={{marginTop:10}}>
                              <SideBarItem label={item.location}>
@@ -33,7 +34,7 @@ export const SimilarJob =()=>{
                              </SideBarItem>
                          </div>
                          <div className={styles.side}>
-                         <p>Posted: {`${item.date} day ago.`}</p>
+                         <p>Posted: {Number(`${item.date}`)>1?`${item.date} days ago`:`${item.date} day ago`}</p>
                          </div>
                          <div className={styles.line}></div>
                      </>)

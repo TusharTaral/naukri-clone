@@ -62,7 +62,7 @@
  
 }
 
-.box{
+.box1{
   background-color: white;
 }
 
@@ -91,6 +91,32 @@
   border: 1px solid black;
   width: max-content;
   border-radius: 18px;
+
+  padding: 6px;
+  font-Size:13px;
+  cursor: pointer;
+}
+.content:hover{
+  border: 1px solid rgb(50, 129, 231);
+  border-radius: 20px;
+  padding: 8px;
+  font-Size:14px;
+  color: blue;
+}
+
+.box
+{
+    width:100%;   
+    border: 1px solid #ebf0f6;
+    margin: 2%;
+    padding:  24px 24px 16px;
+    background-color: white;
+    text-align: left;
+    box-shadow: 0 1px 2px 0 rgba(0,106,194,0.2);
+    display: inline-block;
+    border-radius: 4px;
+    font-family: Roboto,sans-serif;
+
   padding: 4px;
   font-Size:14;
   font-weight: 300;
