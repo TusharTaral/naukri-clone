@@ -56,7 +56,7 @@ export const SideBar = () => {
 
     const [exp, setExp] = useState(0);
     const handleExpChange = (e, value) => {
-        dispatch(getJobsByExp(skill, location, value))
+        // dispatch(getJobsByExp(skill, location, value))
         setExp(value)
     }
 

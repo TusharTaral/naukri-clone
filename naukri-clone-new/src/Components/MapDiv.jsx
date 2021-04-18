@@ -12,6 +12,7 @@ const MapDiv = () => {
     const { count, setCount } = useContext(AuthContext)
     const handleCount = () => {
         setCount(prev => prev + 1)
+
     }
 
     const data = useSelector(state => state.job.jobs)
