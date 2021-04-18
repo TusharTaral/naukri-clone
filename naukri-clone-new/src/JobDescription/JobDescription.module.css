@@ -91,6 +91,7 @@
   border: 1px solid black;
   width: max-content;
   border-radius: 18px;
+
   padding: 6px;
   font-Size:13px;
   cursor: pointer;
@@ -115,4 +116,8 @@
     display: inline-block;
     border-radius: 4px;
     font-family: Roboto,sans-serif;
+
+  padding: 4px;
+  font-Size:14;
+  font-weight: 300;
 }
