@@ -1,0 +1,24 @@
+.container{
+    width:25vw;
+    /* margin-top: 2px; */
+      margin-left: 20px; 
+     padding: 20px 30px;
+     border: 1px solid rgb(199, 197, 197);
+     box-shadow: 0px 0px 3px silver;
+     border-radius: 5px; 
+     margin-top: 10px;
+     height: max-content;
+}
+
+.side{
+    text-align: right;
+}
+
+.line{
+    width: 100%;
+    margin: auto;
+    height: 1px;
+    background-color: rgb(192, 192, 192);
+    margin-top: 8px;
+  }
+
