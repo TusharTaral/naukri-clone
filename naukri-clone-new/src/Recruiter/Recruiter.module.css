@@ -2,7 +2,7 @@
 {
     display: flex;
     justify-content: space-between;
-    width: 670px;
+    width: 650px;
     margin: auto;
     
 }
@@ -36,9 +36,9 @@
     margin:20px 10px;
 }
 .outer{
-    text-align: center;    
-     margin-top: 5%;
-    
+    margin-top: 1rem;
+   text-align: center;
+   
 }
 .btn{
     margin: 20px;
@@ -53,20 +53,11 @@
 .btn:focus{
     outline: none;
 }
-.radio{
-   text-align: left;
-  width: 400px; 
-  margin-top: 20px;
-    
-}
-.radio1{
-    margin: 1px 10px;
-}
 .regi{
     text-shadow: 1px 1px 2px #091e42;
     color: #245b88;
     font-weight: 600;
-    width: 100%;
-    margin-left: 172%;
+ 
+    text-align: center;
    
 }

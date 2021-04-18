@@ -45,6 +45,7 @@ const Education = () => {
             <div className={styles.flex}>
                 <div className={styles.margin1}>Education :</div>
                 <select className={styles.margin} onChange={handleChange} name="education">
+                    <option>Select</option>
                     <option value="Post Graduation">Post Graduation</option>
                     <option value="Graduation">Graduation</option>
                     <option value="less than 10th">less than 10th</option>
@@ -55,6 +56,8 @@ const Education = () => {
             <div className={styles.flex}>
                 <div className={styles.margin1}>Course :</div>
                 <select className={styles.margin} onChange={handleChange} name="course">
+                <option>Select</option>
+
                     <option value="ENGINEERING">ENGINEERING</option>
                     <option value="BSC">BSC</option>
                     <option value="BCOM">BCOM</option>
@@ -63,6 +66,7 @@ const Education = () => {
             <div className={styles.flex}>
                 <div className={styles.margin1}>Specilization :</div>
                 <select className={styles.margin} onChange={handleChange} name="specilization">
+                <option>Select</option>
                     <option value="COMPUTER ENGINEERING">COMPUTER ENGINEERING</option>
                     <option value="ELECTRONICE ENGINEERING">ELECTRONICE ENGINEERING</option>
                     <option value="MECHANICAL ENGINEERING">MECHANICAL ENGINEERING</option>
@@ -85,12 +89,13 @@ const Education = () => {
             <div className={styles.flex}>
                 <div className={styles.margin1}>Course Type :</div>
                 <select className={styles.margin} onChange={handleChange} name="type">
+                <option>Select</option>
                     <option value="Full Time">Full Time</option>
                     <option value="Part Time">Part Time</option>
                     <option value="Distance">Distance</option>
                 </select>
             </div>
-            <div style={{display:"flex",width:'550px',marginLeft:"120px"}}>
+            <div style={{display:"flex",width:'550px',marginLeft:"36%"}}>
             <button className={styles.btn} onClick={handleSubmit}>Next
      </button>
     <Link to="/"> <button className={styles.btn} >Cancel

@@ -1,7 +1,8 @@
 .div1
 {
     width:60%;
-    border: 1px solid grey;
+   border: 1px solid #ebf0f6;
+       box-shadow: 0 1px 2px 0 rgba(0,106,194,0.2);
     border-radius: 1%;
     padding:2%;
     margin: 30px;  
@@ -12,9 +13,7 @@
     font-weight: 400;
     line-height:23px;
     text-align: left;
-    margin-top: 5px;
-    border: 1px solid rgb(214, 210, 210);
-    
+    margin-top: 5px;  
 }
 .flex
 {

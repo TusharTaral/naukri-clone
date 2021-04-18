@@ -11,12 +11,12 @@ import Personal from "./Components/Register/Personal";
 import Details from "./Components/Register/Details"
 import { JobDescription } from "./JobDescription/JobDescription";
 import ProfilePage from "./Components/Profile/ProfilePage";
-
+import {Recruiter} from "./Recruiter/Recruiter"
 
 function App() {
   return (
     <div>
-  
+
       <Switch>
         <Route exact path='/'>
           <Home />
@@ -29,13 +29,13 @@ function App() {
         </Route>
         <Route path='/login'>
           <Routes />
-        </Route>
-
+        </Route> 
+        <Route path='/recruiter'>
+          <Recruiter/>
+        </Route> 
       </Switch>
-      {/* <ProfilePage/> */}
+      
 
-
-    
     </div>
   );
 }

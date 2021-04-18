@@ -61,7 +61,7 @@ const Personal = () => {
                 <div className={styles.margin1}>Work Experiance :-</div>
                 <input className={styles.margin} placeholder="Work experiance" name="work" value={form.work} onChange={handleChange} type="number" />
             </div>
-            <div style={{display:"flex",width:'550px',marginLeft:"160px"}}>
+            <div style={{display:"flex",width:'550px',marginLeft:"37.5%"}}>
             <button className={styles.btn} onClick={handleSubmit}>Next
      </button>
       <button onClick={handleCancle} className={styles.btn} >Cancel

@@ -16,9 +16,9 @@ const Details = () => {
     }
     const handleSubmit = (e) => {
         e.preventDefault()
-        if (form.birth !== "" && form.gender !== "" && form.permanant !== "" && form.hometown !== ""
-        &&form.pincode !== "" && form.marital !== "" && form.category !== "" && form.able !== ""
-        && form.usa !== "" && form.passport !== "") {
+        // if (form.birth !== "" && form.gender !== "" && form.permanant !== "" && form.hometown !== ""
+        // &&form.pincode !== "" && form.marital !== "" && form.category !== "" && form.able !== ""
+        // && form.usa !== "" && form.passport !== "") {
             let paylaod = [
                 ...data,
                 {
@@ -37,10 +37,10 @@ const Details = () => {
             ]
             setData(paylaod)
             setFlag(prev=>!prev)
-        }
-        else {
-            alert("Enter all data");
-        }
+        
+        // else {
+        //     alert("Enter all data");
+        // }
     }
     return !flag?(
         <>
@@ -81,6 +81,7 @@ const Details = () => {
             <div className={styles.flex}>
                 <div className={styles.margin1}>Marital Status:</div>
                 <select onChange={handleChange} className={styles.margin}name="marital">
+                     <option>Select</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
@@ -88,6 +89,7 @@ const Details = () => {
             <div className={styles.flex}>
                 <div className={styles.margin1}>Category:</div>
                 <select onChange={handleChange} className={styles.margin}    name="category">
+                <option>Select</option>
                     <option value="General">General</option>
                     <option value="OBC">OBC</option>
                     <option value="SC">SC</option>
@@ -106,6 +108,7 @@ const Details = () => {
             <div className={styles.flex}>
                 <div className={styles.margin1}>Passport :</div>
                 <select onChange={handleChange} className={styles.margin}  name="passport">
+                <option>Select</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
@@ -113,11 +116,12 @@ const Details = () => {
             <div className={styles.flex}>
                 <div className={styles.margin1}>Work Permit :</div>
                 <select onChange={handleChange} className={styles.margin}  name="usa">
+                <option>Select</option>
                     <option value="yes">Yes</option>
                     <option value="no">No</option>
                 </select>
             </div>
-            <div style={{display:"flex",width:'550px',marginLeft:"140px"}}>
+            <div style={{display:"flex",width:'550px',marginLeft:"37%"}}>
             <button className={styles.btn} onClick={handleSubmit}>Next
      </button>
     <Link to="/"> <button className={styles.btn} >Cancel
