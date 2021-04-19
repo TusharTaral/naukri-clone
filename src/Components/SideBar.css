@@ -1,0 +1,66 @@
+.sidenav{
+  height: 550px; 
+  width: 278px; 
+  position: fixed;
+  z-index: 1;
+  top: 31%;
+  left: 8%;
+  bottom: 0;
+  overflow-x: hidden; 
+  padding-top: 2%;
+  padding-left: 10px;
+  border: 1px solid #ebf0f6;
+    box-shadow: 0 1px 2px 0 rgba(0,106,194,0.2);
+}
+
+.useEffect{
+ top: 0;
+}
+
+.sidenav > div {
+  display: block;
+}
+
+
+.filterTitle{
+  color: #091e42;
+  font-size: 14px;
+  margin-top: 7px;
+}
+
+.itemDiv{
+  display: flex;
+  flex-direction: column;
+}
+
+.forMargin{
+  margin-top: 10px;
+}
+
+.itemDiv>div{
+  display: flex;
+  margin-top: 5px;
+  margin-left:1px;
+}
+
+.itemDiv>div>p{
+  margin-left: 9px;
+     color: #536777;
+     display: inline-block;
+     margin-top: -5px;
+}
+
+.itemDiv>div>input{
+  width: 15px;
+  height: 15px;
+      color: #536777;
+}
+
+.filterDiv{
+  padding: 7px 0px ;
+}
+
+.slider:focus{
+  outline: none;
+  border: none;
+}

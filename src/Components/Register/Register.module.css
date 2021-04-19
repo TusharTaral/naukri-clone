@@ -1,0 +1,56 @@
+.flex
+{
+    display: flex;
+    justify-content: space-between;
+    width: 700px;
+    margin: auto;
+    /* background-color: black; */
+    
+}
+.margin
+{
+    width: 500px;
+    height: 45px;
+    margin: 10px;
+    padding: 1px 5px;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.margin:focus{
+    outline:none
+}
+.margin1
+{
+    font-size: 17px;
+    margin:20px 10px;
+}
+.outer{
+    text-align: center;    
+     margin-top: 5%;
+    
+}
+.btn{
+    margin: 20px;
+     background-color: rgb(34, 143, 206);
+    width: 250px;
+     height: 50px; 
+     border-radius: 10px;
+    /* margin-left:330px; */
+    font-size: 17px;
+    border: none;
+}
+.btn:focus{
+    outline: none;
+}
+
+.regi{
+    text-shadow: 1px 1px 2px #091e42;
+    color: #245b88;
+    font-weight: 600;
+    margin-left: 10%;
+    text-align: center;
+   
+   
+   
+}
+

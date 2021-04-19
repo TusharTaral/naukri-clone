@@ -1,0 +1,129 @@
+
+
+    .FirstDiv{
+        display: flex;
+        width: 80%;
+        height: 120px;
+        /* border: 0.5px solid grey; */
+        border-radius: 20px;
+        padding-bottom:20px;
+        padding: 3%;
+        margin-top: -80px;
+        background-color: white;
+        margin-left: 7%;
+        border: 1px solid rgb(214, 210, 210);
+        
+    }
+    .FirstDiv1{
+        flex-basis: 60%;
+        display: inline-block;
+        color: #2d3a72;
+        font-family: Roboto;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 26px;
+    }
+
+    .header{
+    display: inline-block;
+    color: #2d3a72;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+    }
+
+    .search1
+    {
+        display: flex;
+        width: 85%;
+        height: 50px;
+        margin-right: 15px;
+        padding-top: 7px;
+        padding-left: 10px;
+        background-color: #fff;
+         border: 1px solid #ced4dd;
+          border-radius: 4px;
+         -webkit-box-shadow: 0 1px 4px 0 rgba(0,106,194,.2);
+      box-shadow: 0 1px 4px 0 rgba(0,106,194,.2);
+        font-size: 12px;
+        color: #666;
+    }
+    .search2
+    {
+        display: flex;
+        width: 45%;
+        height: 50px;
+        margin-right: 15px;
+        padding-top: 7px;
+        padding-left: 10px;
+         background-color: #fff;
+         border: 1px solid #ced4dd;
+         border-radius: 4px;
+         -webkit-box-shadow: 0 1px 4px 0 rgba(0,106,194,.2);
+         box-shadow: 0 1px 4px 0 rgba(0,106,194,.2);
+         font-size: 12px;
+        color: #666;
+    }
+    .FirstDiv2{
+       
+        flex-basis: 40%;
+        color: #091e42;
+        font-family: Roboto;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+        text-align: left;
+        margin-top: 8px;
+    }
+    .jobBox{
+        /* box-shadow: 0 1px 20px 0 rgba(88, 81, 81, 0.2), 0 2px 20px 0 rgba(97, 88, 88, 0.19); */
+       height: 9rem;
+       padding: 10px;
+       margin-left: 40px;
+       width: 35%;
+       border: 1px solid rgb(221, 216, 216);
+
+    }
+    .btn
+    {
+        background-color: #4a90e2;
+        width: 40%;
+        height: 57px;
+        border: 0px;
+        border-radius:3px;
+        color: white;
+        font: bold;
+        font-size:15px;
+    }
+    .flex
+    {
+        display: flex;
+    }
+    .btn1
+    {
+        margin: 30px;
+        width: 180px;
+        height: 50px;
+        background-color: orange;
+        border: 0px;
+        color: white;
+        font-size: 15px;
+    }
+    .btn2
+    {
+        margin: 30px;
+        width: 180px;
+        height: 50px;
+        background-color:rgb(240, 240, 240);
+        border: 1px solid blue;
+        color: blue;
+        font-size: 15px;
+    }
+    .searchJob:focus{
+        outline: none;
+       
+    }
+    .searchJob{
+  margin-left: 10px;
+    }

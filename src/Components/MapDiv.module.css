@@ -1,0 +1,88 @@
+.container{
+    width: 35%;
+    /* margin-top: 2px; */
+      margin-left: 490px; /* Same as the width of the sidebar */
+     padding: 20px 10px;
+     position: absolute;
+  /* border: 1px solid red; */
+}
+
+.box
+{
+    width:100%;   
+    border: 1px solid #ebf0f6;
+    margin: 2%;
+    padding:  24px 24px 16px;
+    background-color: white;
+    text-align: left;
+    box-shadow: 0 1px 2px 0 rgba(0,106,194,0.2);
+    display: inline-block;
+    border-radius: 4px;
+    font-family: Roboto,sans-serif;
+}
+
+.companyName{
+    color:#091e42;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.rating{
+    margin-top: 7px;
+    margin-right: 3px;
+}
+
+.ratingDiv{
+    display: flex;
+    justify-content: space-between;
+    padding-right: 60px;
+    /* border:1px solid black; */
+}
+
+.ratingDivTwo{
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+.skill{
+    color: #091e42!important;
+    line-height: 16px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.subs{
+    font-size: 14px;
+    color: #536777;
+    margin-top: 7px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.box:hover{
+    
+    box-shadow: 0 4px 8px 0 rgba(17, 16, 16, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    
+}
+
+.flex{
+    display: flex; 
+}
+.img{
+    margin: 2px;
+    margin-top: 8px ;
+ font-size: 16px;
+    height: 14px;
+    width: 15px;
+}
+.margin
+{
+    margin-right:40px;
+    margin-left: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.dateDiv{
+    background: #d7f2e3;
+}

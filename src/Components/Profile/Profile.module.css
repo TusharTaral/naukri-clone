@@ -1,0 +1,76 @@
+.img
+{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-top: -10%;
+    margin-bottom: 30px;
+}
+.div
+{
+    width:70%;
+    text-align: center;
+    padding: 5px;
+    font-family: Roboto;
+    color: #091e42 ;
+    font-size: 14px;
+    font-weight: 400;
+    line-height:23px;
+    margin-top: 10%;
+    border: 1px solid rgb(214, 210, 210);
+    background-color: white;
+    height: 150%;
+    margin-left: 12%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.search1
+{
+    display: flex;
+    border:1px solid grey;
+    width: 60%;
+    height: 60px;
+    margin-left: 20%;
+    margin-top: 10%;
+    margin-right: 15px;
+    padding-left: 10px;
+    background-color: white;
+
+}
+.searchJob{
+    margin-left: 10px;
+
+      }
+      .searchJob:focus{
+          outline:none;
+      }
+      .back
+      {
+        background-repeat: no-repeat;
+        height: 15rem;
+        width:100%;
+        background-size: cover;
+        background-image:url("data:image/jpeg;base64,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") ;
+      }
+      .btn
+      {
+          background-color: #4a90e2;
+          width: 40%;
+          height: 60px;
+          border: 0px;
+          color: white;
+          font: bold;
+          font-size:15px;
+          margin-left: 20px;
+      }
+      .save
+      {
+          width:30%;
+        font-family: Roboto;
+        border: 1px solid rgb(214, 210, 210);
+        background-color:whitesmoke;
+        height: 150px;
+        margin-left: 11%;
+        padding: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+      }
+      

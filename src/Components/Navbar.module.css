@@ -1,0 +1,150 @@
+
+.background{
+  height: 200px;
+  margin-top: 0px;
+
+}
+
+
+.header {
+    width: 100%;
+    min-height: 100px;  
+    position: relative;
+    font-family: HCoGothamSSmSemiBold, Arial, Sans-Serif;
+    font-size: 12px;
+    /* margin-bottom: -55px; */
+    /* position: sticky;
+    top: 100px; */
+    
+  }
+  .navbar {
+    position: relative;
+  }
+  .navbar >.image{
+    margin-left: 100px;
+    margin-right: 30px;
+    position: relative;
+    width: 200px;
+  }
+  .image>img{
+    position: absolute;
+    top:-15px;
+  }
+  .navbar > li ,.navbar > .image{
+    list-style: none;
+    display: inline-block;
+    line-height: 30px;
+  }
+ 
+  .navbar > li:hover {
+    border-bottom: 3px solid #ffffff;
+    transition: 0.5s;
+  }
+  
+  .header span {
+    padding: 10px 20px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  span:hover{
+    border-bottom: 3px solid #ffffff;
+    transition: 0.5s;
+  }
+
+  .drop_one{
+    margin-top: 20px;
+  }
+
+  .menu_one,
+  .menu_two,
+  .menu_three,
+  .menu_four,
+  .menu_five,
+  .menu_six,
+  .menu_seven {
+    position: absolute;
+    width: max-content;
+    background: rgb(255, 255, 255, 1);
+    display: flex;
+    box-shadow: 0 0 3px rgb(216, 213, 213);
+    padding-top: 10px; 
+    transition: 0.5s;
+  }
+  
+  .menu_experiment{
+    display: none;
+  }
+
+  .drop_one:hover >.menu_experiment,
+  .drop_two:hover > .menu_experiment,
+  .drop_three:hover > .menu_experiment,
+  .drop_four:hover > .menu_experiment,
+  .drop_five:hover > .menu_experiment,
+  .drop_six:hover > .menu_experiment,
+  .drop_seven:hover > .menu_experiment {
+    display: block; 
+    z-index: 10;
+    margin-top: 15px;
+  }
+  .menu_one > ul li:hover,
+  .menu_two > ul li:hover,
+  .menu_three > ul li:hover,
+  .menu_four > ul li:hover,
+  .menu_five > ul li:hover,
+  .menu_six > ul li:hover,
+  .menu_seven > ul li:hover {
+    border-bottom: 3px solid #2f82ab;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+  
+  .menu_one {
+    justify-content: space-around;
+    
+  }
+  .menu_two > ul li {
+    margin-left: 0px;
+
+  }
+  .menu_three > ul li {
+    margin-left: 0px;
+  
+  }
+  .menu_four > ul li {
+    margin-left: 0px;
+   
+  }
+  .menu_five > ul li {
+    margin-left: 0px;
+  }
+  .menu_six > ul li {
+    margin-left: 0px;
+    
+  }
+  
+  .menu_five > ul li:hover {
+    padding-bottom: 10px;
+  }
+  .menu_seven {
+    margin-left: -250px;
+    padding: 20px 30px;
+    font-size: 14px;
+    padding-right: 140px;
+  }
+  .menu_one ul,
+  .menu_two ul,
+  .menu_three ul,
+  .menu_four ul,
+  .menu_five ul,
+  .menu_six ul,
+  .menu_seven ul {
+    list-style: none;
+    padding: 10px;
+    color: #1d1d1d;
+  }
+  .navbar{
+    top: 0;
+  }

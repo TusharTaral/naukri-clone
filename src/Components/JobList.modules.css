@@ -1,0 +1,13 @@
+.parent{
+     margin-left: 160px;
+     position: relative;
+}
+
+.container{
+    display:flex;
+    flex-direction: column;
+    width: 40%;
+    margin: auto;
+    border: 1px solid rgb(214, 210, 210);
+    top: 0;
+}
